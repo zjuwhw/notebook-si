@@ -2,13 +2,130 @@
 
 ## Set Theory
 
-- Sample space: The set, S, of all possible outcomes of a particular experiment
-  - countable
-  - uncountable
+**Definition 1.1.1**:
+
+**Sample space**: The set, S, of all possible outcomes of a particular experiment
+
+- countable
+- uncountable
+
+**Definition 1.1.2**:
+
+**Event**: any collection of possible outcomes of an experiment, that is, any subset of S (including S itself).
+
+- **Union**: The union of A and B, written $A \cup B$, is the set of elements tat belong to either A or B or both. $A \cup B= \{ x: x\in A\text{ or }x \in B \}$
+- **Intersection**: The intersection of A and B, written $A \cap B$, is the set of elements that belong to both A and B. $A\cap B=\{x: x \in A\text{ and }x \in B\}$ 
+- **Complementation**: The complement of A, written $A^c$, is the set of all elements that are not in A. $A^c = \{x: x\notin A\}$
+
+**Theorem 1.1.4**:
+
+For any three events, A, B and C, defined on a sample space S,
+
+- Commutativity: $A \cup B = B \cup A$; $A \cap B = B \cap A$
+- Associativity: $A \cup (B \cup C) = (A \cup B) \cup C$; $A \cap (B \cap C) = (A \cap B) \cap C$
+- Distributive Laws: $A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$; $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$
+- DeMorgan's Laws: $(A \cup B)^c = A^c \cap B^c$; $(A \cap B)^c = A^c \cup B^c$
+
+**Definition 1.1.5**:
+
+Two events A and B are **disjoint** (or mutually exclusive) if $A \cap B = \emptyset$. The events $A_1, A_2, ...$ are **pairwise disjoint** (or mutually exclusive) if $A_i \cap A_j = \emptyset\text{ for all }a \neq b$.
+
+One pairwise disjoint example: $A_i = [i, i+1), i =0,1,2,...$.
+
+**Definition 1.1.6**:
+
+If A_1, A_2, ... are pairwise disjoint and $\cup _{i=0}^{\infty} A_i = [0,\infty) = S$, then the collection of $A_1, A_2, ...$ forms a **partition** of S.
 
 ## Basics of Probability Theory
 
+### Axiomatic（公理的） Foundations
+
+**Definition 1.2.1**:
+
+A collection of subsets of S is called sigma algebra (or Borel field), denoted by $\mathcal{B}$, if it satisfies the following three properties:
+
+- $\emptyset \in \mathcal{B}$ (the empty set is an element of $\mathcal{B}$)
+- If $A \in \mathcal{B}$, then $A^c \in \mathcal{B}$ ($\mathcal{B}$ is closed under complementation)
+- If $A_1, A_2, ... \in \mathcal{B}, then \cup^{\infty}_{i=1}A_i \in \mathcal{B}$ ($\mathcal{B}$ is closed under coutable unions.)
+
+**Example 1.2.2 (Sigma algebra-I)**:
+
+If S is finite or countable, then these techinicalities really do not arise, for we define for a given sample space S,
+
+$$\mathcal{B} = \text{{all subsets of S, including S itself}}$$
+
+If S has n elements, there are $2^n$ sets in $\mathcal{B}$. For example, if S={1,2,3}, then $\mathcal{B}$ = {{1}, {2}, {3}, {1,2},{2,3},{1,3},{1,2,3},$\emptyset$}.
+
+**Definition 1.2.4 (Kolmogorov Axioms)**:
+
+Given a sample space S and an associated sigma algebra $\mathcal{B}$, a probability function is a function P with domain $\mathcal{B}$ that satisfies
+
+- $P(A) \geq 0\text{ for all } A \in \mathcal{B}$
+- P(S) = 1
+- If $A_1, A_2, ... \in \mathcal{B}$ are pairwise disjoint, then $P(\cup^{\infty}_{i=1}A_i) = \sum_{i=1}^{\infty}P(A_i)$
+
+### The Calculus of Probabilities
+
+**Theorem 1.2.8**
+
+If P is a probability function and A is any set in $\mathcal{B}$, then
+
+- $P(\emptyset)=0$
+- $P(A) \leq 1$
+- $P(A^c) = 1- P(A)$
+
+**Theorem 1.2.9**
+
+If P is a probability function and A and B are any sets in $\mathcal{B}$, then
+
+- $P(B \cap A^c) = P(B) -P(A\cap B)$
+- $P(A \cup B) = P(A) + P(B) - P(A \cap B )$
+- If $A \subset B$, then P(A) $\leq$ P(B)
+
+
+Bonferroni's Inequality: From the second formula, we can get
+
+$$P(A \cap B) \geq P(A) + P(B) - 1$$
+**Theorem 1.2.11**
+
+If P is a probability function, then
+
+- $P(A) = \sum_{i=1}^\infty P(A \cap C_i)$ for any partition $C_1, C_2, ...$
+- $P(\cup){i=1}^\infty \leq \sum_{i=1}^\infty P(A_i)$ for any sets $A_i, A_2, ...$ (Boole's Inequality)
+
+### Counting
+
+**Theorem 1.2.14**
+
+If a job consistes of k separate tasksm the ith of which can be done in $n_i$ ways, i =1,...,k, then the entire job can be done in $n_1 \times n_2 \times ...\times n_k$ ways
+
+**Definition 1.2.16**
+
+For a positive integer n, n! (read n factorial) is the product of all of the positive integers less than or equal to n. That is 
+
+$$n! = n \times (n-1) \times (n-2) \times ... \times 1$$
+
+Furthermore, we define 0! = 1
+
+**Definition 1.2.17**
+
+For nonnegative integers n and r, wher n $\geq$ r, we define the symbol $\binom{r}{n}$, read n choos r, as
+
+$$\binom{r}{n} = \frac{n!}{r!(n-r)!}$$
+
+### Enumerating Outcomes
+
+$$P(A) = \displaystyle\sum_{s_i \in A} P(\{s_i\}) = \displaystyle\sum_{s_i \in A}\frac{1}{N} = \frac{\text{# of elements in A}}{\text{# of elements in S}}$$
+
 ## Conditional Probability and Independence
+
+When we update the sample space on new information, we want to be able to update probability calculations or to calculate conditional probabilities.
+
+**Definition 1.3.2**
+
+If A and B are events in S, and P(B) > 0, then the conditional probability of A given B, written P(A|B), is
+
+$$P(A|B) = \frac{P(A\cap B)}{P(B)}$$
 
 ## Random Variables
 
@@ -16,3 +133,4 @@
 
 ## Density and Mass Functions
 
+## Miscellanea

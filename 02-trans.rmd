@@ -1,0 +1,11 @@
+# Transformations and Expectations
+
+## Distributions of Functions of a Random Variable
+
+## Expected Values
+
+## Moments and Moment Generating Functions
+
+## Differentiating Under an Integral Sign
+
+## Miscellanea

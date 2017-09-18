@@ -1,0 +1,25 @@
+# Interval Estimation
+
+## Introduction
+
+## Methods of Finding Interval Estimators
+
+### Inverting a Test Statistic
+
+### Pivotal Quantities
+
+### Pivoting the CDF
+
+### Bayesian Intervals
+
+## Methods of Evaluating Interval Estimators
+
+### Size and Coverage Probability
+
+### Test-Related Optimality
+
+### Bayesian Optimality
+
+### Loss Function Optimality
+
+## Miscllanea

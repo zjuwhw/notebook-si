@@ -1,0 +1,23 @@
+# Principles of Data Reduction
+
+## Introduction
+
+## The Sufficiency Principle
+
+### Sufficient Statistics
+
+### Minimal Sufficient Statistics
+
+### Ancillary Statistics
+
+### Sufficient, Ancillary, and Complete Statistics
+
+## The Likelihood Principle
+
+### The Likelihood Function
+
+### The Formal Likelihood Principe
+
+## The Equivariance Principle
+
+## Miscelllanea

@@ -1,0 +1,25 @@
+# Point Estimation
+
+## Introduction
+
+## Methods of Finding Estimators
+
+### Method of Moments
+
+### Maximum Likelihood Estimators
+
+### Bayes Estimators
+
+### The EM Algorithm
+
+## Methods of Evaluating Estimators
+
+### Mean Squared Error
+
+### Best Unbiased Estimators
+
+### Sufficiency and Unbiasedness
+
+### Loss Function Optimality
+
+## Miscellanea

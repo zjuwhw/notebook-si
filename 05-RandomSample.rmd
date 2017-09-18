@@ -1,0 +1,33 @@
+# Properties of a Random Sample
+
+## Basic Concepts of Random Samples
+
+## Sums of Random Variables from a Random Sample
+
+## Sampling from the Normal Distribution
+
+### Properties of the Sample Mean and Variance
+
+### The Derived Distributions: Student's t and Snedecor's F
+
+## Order Statistics
+
+## Convergence Concepts
+
+### Convergence in Probability
+
+### Almost Sure Convergence
+
+### Convergence in Distribution
+
+### The Delta Method
+
+## Generating a Random Sample
+
+### Direct Methods
+
+### Indirect Methods
+
+### The Accept/Reject Algorithm
+
+## Miscellance

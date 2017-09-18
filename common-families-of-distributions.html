@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="index.html">
-<link rel="next" href="transformations-and-expectations.html">
+<link rel="prev" href="transformations-and-expectations.html">
+<link rel="next" href="multiple-random-variables.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -270,119 +270,34 @@ Published with <a href="https://github.com/rstudio/bookdown" target="blank">book
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="probability-theory" class="section level1">
-<h1><span class="header-section-number">2</span> Probability Theory</h1>
-<div id="set-theory" class="section level2">
-<h2><span class="header-section-number">2.1</span> Set Theory</h2>
-<p><strong>Definition 1.1.1</strong>:</p>
-<p><strong>Sample space</strong>: The set, S, of all possible outcomes of a particular experiment</p>
-<ul>
-<li>countable</li>
-<li>uncountable</li>
-</ul>
-<p><strong>Definition 1.1.2</strong>:</p>
-<p><strong>Event</strong>: any collection of possible outcomes of an experiment, that is, any subset of S (including S itself).</p>
-<ul>
-<li><strong>Union</strong>: The union of A and B, written <span class="math inline">\(A \cup B\)</span>, is the set of elements tat belong to either A or B or both. <span class="math inline">\(A \cup B= \{ x: x\in A\text{ or }x \in B \}\)</span></li>
-<li><strong>Intersection</strong>: The intersection of A and B, written <span class="math inline">\(A \cap B\)</span>, is the set of elements that belong to both A and B. <span class="math inline">\(A\cap B=\{x: x \in A\text{ and }x \in B\}\)</span></li>
-<li><strong>Complementation</strong>: The complement of A, written <span class="math inline">\(A^c\)</span>, is the set of all elements that are not in A. <span class="math inline">\(A^c = \{x: x\notin A\}\)</span></li>
-</ul>
-<p><strong>Theorem 1.1.4</strong>:</p>
-<p>For any three events, A, B and C, defined on a sample space S,</p>
-<ul>
-<li>Commutativity: <span class="math inline">\(A \cup B = B \cup A\)</span>; <span class="math inline">\(A \cap B = B \cap A\)</span></li>
-<li>Associativity: <span class="math inline">\(A \cup (B \cup C) = (A \cup B) \cup C\)</span>; <span class="math inline">\(A \cap (B \cap C) = (A \cap B) \cap C\)</span></li>
-<li>Distributive Laws: <span class="math inline">\(A \cap (B \cup C) = (A \cap B) \cup (A \cap C)\)</span>; <span class="math inline">\(A \cup (B \cap C) = (A \cup B) \cap (A \cup C)\)</span></li>
-<li>DeMorgan’s Laws: <span class="math inline">\((A \cup B)^c = A^c \cap B^c\)</span>; <span class="math inline">\((A \cap B)^c = A^c \cup B^c\)</span></li>
-</ul>
-<p><strong>Definition 1.1.5</strong>:</p>
-<p>Two events A and B are <strong>disjoint</strong> (or mutually exclusive) if <span class="math inline">\(A \cap B = \emptyset\)</span>. The events <span class="math inline">\(A_1, A_2, ...\)</span> are <strong>pairwise disjoint</strong> (or mutually exclusive) if <span class="math inline">\(A_i \cap A_j = \emptyset\text{ for all }a \neq b\)</span>.</p>
-<p>One pairwise disjoint example: <span class="math inline">\(A_i = [i, i+1), i =0,1,2,...\)</span>.</p>
-<p><strong>Definition 1.1.6</strong>:</p>
-<p>If A_1, A_2, … are pairwise disjoint and <span class="math inline">\(\cup _{i=0}^{\infty} A_i = [0,\infty) = S\)</span>, then the collection of <span class="math inline">\(A_1, A_2, ...\)</span> forms a <strong>partition</strong> of S.</p>
+<div id="common-families-of-distributions" class="section level1">
+<h1><span class="header-section-number">4</span> Common Families of Distributions</h1>
+<div id="introduction" class="section level2">
+<h2><span class="header-section-number">4.1</span> Introduction</h2>
 </div>
-<div id="basics-of-probability-theory" class="section level2">
-<h2><span class="header-section-number">2.2</span> Basics of Probability Theory</h2>
-<div id="axiomatic-foundations" class="section level3">
-<h3><span class="header-section-number">2.2.1</span> Axiomatic（公理的） Foundations</h3>
-<p><strong>Definition 1.2.1</strong>:</p>
-<p>A collection of subsets of S is called sigma algebra (or Borel field), denoted by <span class="math inline">\(\mathcal{B}\)</span>, if it satisfies the following three properties:</p>
-<ul>
-<li><span class="math inline">\(\emptyset \in \mathcal{B}\)</span> (the empty set is an element of <span class="math inline">\(\mathcal{B}\)</span>)</li>
-<li>If <span class="math inline">\(A \in \mathcal{B}\)</span>, then <span class="math inline">\(A^c \in \mathcal{B}\)</span> (<span class="math inline">\(\mathcal{B}\)</span> is closed under complementation)</li>
-<li>If <span class="math inline">\(A_1, A_2, ... \in \mathcal{B}, then \cup^{\infty}_{i=1}A_i \in \mathcal{B}\)</span> (<span class="math inline">\(\mathcal{B}\)</span> is closed under coutable unions.)</li>
-</ul>
-<p><strong>Example 1.2.2 (Sigma algebra-I)</strong>:</p>
-<p>If S is finite or countable, then these techinicalities really do not arise, for we define for a given sample space S,</p>
-<p><span class="math display">\[\mathcal{B} = \text{{all subsets of S, including S itself}}\]</span></p>
-<p>If S has n elements, there are <span class="math inline">\(2^n\)</span> sets in <span class="math inline">\(\mathcal{B}\)</span>. For example, if S={1,2,3}, then <span class="math inline">\(\mathcal{B}\)</span> = {{1}, {2}, {3}, {1,2},{2,3},{1,3},{1,2,3},<span class="math inline">\(\emptyset\)</span>}.</p>
-<p><strong>Definition 1.2.4 (Kolmogorov Axioms)</strong>:</p>
-<p>Given a sample space S and an associated sigma algebra <span class="math inline">\(\mathcal{B}\)</span>, a probability function is a function P with domain <span class="math inline">\(\mathcal{B}\)</span> that satisfies</p>
-<ul>
-<li><span class="math inline">\(P(A) \geq 0\text{ for all } A \in \mathcal{B}\)</span></li>
-<li>P(S) = 1</li>
-<li>If <span class="math inline">\(A_1, A_2, ... \in \mathcal{B}\)</span> are pairwise disjoint, then <span class="math inline">\(P(\cup^{\infty}_{i=1}A_i) = \sum_{i=1}^{\infty}P(A_i)\)</span></li>
-</ul>
+<div id="discrete-distributions" class="section level2">
+<h2><span class="header-section-number">4.2</span> Discrete Distributions</h2>
 </div>
-<div id="the-calculus-of-probabilities" class="section level3">
-<h3><span class="header-section-number">2.2.2</span> The Calculus of Probabilities</h3>
-<p><strong>Theorem 1.2.8</strong></p>
-<p>If P is a probability function and A is any set in <span class="math inline">\(\mathcal{B}\)</span>, then</p>
-<ul>
-<li><span class="math inline">\(P(\emptyset)=0\)</span></li>
-<li><span class="math inline">\(P(A) \leq 1\)</span></li>
-<li><span class="math inline">\(P(A^c) = 1- P(A)\)</span></li>
-</ul>
-<p><strong>Theorem 1.2.9</strong></p>
-<p>If P is a probability function and A and B are any sets in <span class="math inline">\(\mathcal{B}\)</span>, then</p>
-<ul>
-<li><span class="math inline">\(P(B \cap A^c) = P(B) -P(A\cap B)\)</span></li>
-<li><span class="math inline">\(P(A \cup B) = P(A) + P(B) - P(A \cap B )\)</span></li>
-<li>If <span class="math inline">\(A \subset B\)</span>, then P(A) <span class="math inline">\(\leq\)</span> P(B)</li>
-</ul>
-<p>Bonferroni’s Inequality: From the second formula, we can get</p>
-<p><span class="math display">\[P(A \cap B) \geq P(A) + P(B) - 1\]</span> <strong>Theorem 1.2.11</strong></p>
-<p>If P is a probability function, then</p>
-<ul>
-<li><span class="math inline">\(P(A) = \sum_{i=1}^\infty P(A \cap C_i)\)</span> for any partition <span class="math inline">\(C_1, C_2, ...\)</span></li>
-<li><span class="math inline">\(P(\cup){i=1}^\infty \leq \sum_{i=1}^\infty P(A_i)\)</span> for any sets <span class="math inline">\(A_i, A_2, ...\)</span> (Boole’s Inequality)</li>
-</ul>
+<div id="continuous-distributions" class="section level2">
+<h2><span class="header-section-number">4.3</span> Continuous Distributions</h2>
 </div>
-<div id="counting" class="section level3">
-<h3><span class="header-section-number">2.2.3</span> Counting</h3>
-<p><strong>Theorem 1.2.14</strong></p>
-<p>If a job consistes of k separate tasksm the ith of which can be done in <span class="math inline">\(n_i\)</span> ways, i =1,…,k, then the entire job can be done in <span class="math inline">\(n_1 \times n_2 \times ...\times n_k\)</span> ways</p>
-<p><strong>Definition 1.2.16</strong></p>
-<p>For a positive integer n, n! (read n factorial) is the product of all of the positive integers less than or equal to n. That is</p>
-<p><span class="math display">\[n! = n \times (n-1) \times (n-2) \times ... \times 1\]</span></p>
-<p>Furthermore, we define 0! = 1</p>
-<p><strong>Definition 1.2.17</strong></p>
-<p>For nonnegative integers n and r, wher n <span class="math inline">\(\geq\)</span> r, we define the symbol <span class="math inline">\(\binom{r}{n}\)</span>, read n choos r, as</p>
-<p><span class="math display">\[\binom{r}{n} = \frac{n!}{r!(n-r)!}\]</span></p>
+<div id="exponential-families" class="section level2">
+<h2><span class="header-section-number">4.4</span> Exponential Families</h2>
 </div>
-<div id="enumerating-outcomes" class="section level3">
-<h3><span class="header-section-number">2.2.4</span> Enumerating Outcomes</h3>
-<p><span class="math display">\[P(A) = \displaystyle\sum_{s_i \in A} P(\{s_i\}) = \displaystyle\sum_{s_i \in A}\frac{1}{N} = \frac{\text{# of elements in A}}{\text{# of elements in S}}\]</span></p>
+<div id="location-and-scale-families" class="section level2">
+<h2><span class="header-section-number">4.5</span> Location and Scale Families</h2>
+</div>
+<div id="inequalities-and-identities" class="section level2">
+<h2><span class="header-section-number">4.6</span> Inequalities and Identities</h2>
+<div id="probability-inequalities" class="section level3">
+<h3><span class="header-section-number">4.6.1</span> Probability Inequalities</h3>
+</div>
+<div id="identities" class="section level3">
+<h3><span class="header-section-number">4.6.2</span> Identities</h3>
 </div>
 </div>
-<div id="conditional-probability-and-independence" class="section level2">
-<h2><span class="header-section-number">2.3</span> Conditional Probability and Independence</h2>
-<p>When we update the sample space on new information, we want to be able to update probability calculations or to calculate conditional probabilities.</p>
-<p><strong>Definition 1.3.2</strong></p>
-<p>If A and B are events in S, and P(B) &gt; 0, then the conditional probability of A given B, written P(A|B), is</p>
-<p><span class="math display">\[P(A|B) = \frac{P(A\cap B)}{P(B)}\]</span></p>
-</div>
-<div id="random-variables" class="section level2">
-<h2><span class="header-section-number">2.4</span> Random Variables</h2>
-</div>
-<div id="distribution-functions" class="section level2">
-<h2><span class="header-section-number">2.5</span> Distribution Functions</h2>
-</div>
-<div id="density-and-mass-functions" class="section level2">
-<h2><span class="header-section-number">2.6</span> Density and Mass Functions</h2>
-</div>
-<div id="miscellanea" class="section level2">
-<h2><span class="header-section-number">2.7</span> Miscellanea</h2>
+<div id="miscellanea-2" class="section level2">
+<h2><span class="header-section-number">4.7</span> Miscellanea</h2>
 
 </div>
 </div>
@@ -391,8 +306,8 @@ Published with <a href="https://github.com/rstudio/bookdown" target="blank">book
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="transformations-and-expectations.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="transformations-and-expectations.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="multiple-random-variables.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

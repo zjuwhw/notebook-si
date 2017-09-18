@@ -1,0 +1,33 @@
+# Analysis of Variance and Regression
+
+## Introduction
+
+## Oneway Analysis of Variance
+
+### Model and Distribution Assumptions
+
+### The Classical ANOVA Hypothesis
+
+### Inferences Regarding Linear Combinations of Means
+
+### The ANOVA F Test
+
+### Simultaneous Estimation of Contrasts
+
+### Partitioning Sums of Squares
+
+## Simple Linear Regression
+
+### Least Squares: A Mathematical Solution
+
+### Best Linear Unbiased Estimators: A Statistical Solution
+
+### Models and Distribution Assumptions
+
+### Estimation and Testing with Normal Erros
+
+### Estimation and Prediction at a Specified x = x0
+
+### Simultaneous Estimation and Confidence Bands
+
+## Miscellanea
