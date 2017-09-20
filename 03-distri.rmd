@@ -2,7 +2,21 @@
 
 ## Introduction
 
+Statistical distributions are used to model populations; as such, we usualy deal with **a family of distributions** rather than a single distribution.
+
+This family is indexed by one or more parameters, which allow us to vary certian characteristics of the distribution while staying with one functional form.
+
 ## Discrete Distributions
+
+**Discrete Uniform Distribution**
+
+A random variable X has a discrete uniform (1,N) distribution if
+
+$$P(X=x|N) = \frac{1}{N}, x = 1,2,3,...,N$$,
+
+where N is a specified integer.
+
+
 
 ## Continuous Distributions
 
