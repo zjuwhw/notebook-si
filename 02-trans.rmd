@@ -10,7 +10,7 @@ Formally, if we write y = g(x), the function g(x) defines a mapping from the ori
 
 $$g(x): \mathcal{X} \to \mathcal{Y}$$
 
-We associate with g an inverse mapping, denoted by $g^{-1)$,
+We associate with g an inverse mapping, denoted by $g^{-1}$,
 
 $$g^{-1}(A) = \{ x \in \mathcal{X}: g(x) \in A\}$$
 
@@ -64,7 +64,7 @@ Let X be a random variable and let a, b and c be constants. Then for any functio
 
 For each integer n, the nth **moment** of X (or $F_X(x)$), $\mu^{'}_n = E(X^{n})$.
 
-The nth **central moment** of X, $\mu^_n = E((X-\mu)^{n})$, where $\mu = \mu_1^{'} = E(X)$.
+The nth **central moment** of X, $\mu_n = E((X-\mu)^{n})$, where $\mu = \mu_1^{'} = E(X)$.
 
 **Definition 2.3.2**
 
