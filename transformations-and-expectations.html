@@ -291,6 +291,8 @@ Published with <a href="https://github.com/rstudio/bookdown" target="blank">book
 <li>If g is an increasing function on <span class="math inline">\(\mathcal{X}\)</span>, <span class="math inline">\(F_Y(y) = F_X(g^{-1}(g))\text{ for }y \in \mathcal{Y}\)</span></li>
 <li>If g is a decreasing function on <span class="math inline">\(\mathcal{X}\)</span> and X is a continuous random variable, <span class="math inline">\(F_Y(y) = 1-F_X(g^{-1}(y))\text{ for }y \in \mathcal{Y}\)</span></li>
 </ul>
+<p><strong>Theorem 2.1.10</strong></p>
+<p>Let X have continuous cdf <span class="math inline">\(F_X(x)\)</span> and define the random variable Y as Y = <span class="math inline">\(F_X(X)\)</span>. Then Y is uniformly distributed on (0,1), that is, <span class="math inline">\(P(Y \leq y) = y, 0&lt;y&lt;1\)</span>.</p>
 </div>
 <div id="expected-values" class="section level2">
 <h2><span class="header-section-number">3.2</span> Expected Values</h2>
@@ -299,9 +301,37 @@ Published with <a href="https://github.com/rstudio/bookdown" target="blank">book
 <p><span class="math display">\[E(g(X)) = \int_{-\infty}^{\infty} g(x)f_X(x)dx\]</span>, if X is continuous</p>
 <p><span class="math display">\[E(g(x)) = \sum_{x \in \mathcal{X}} g(x)f_X(x) = \sum_{x \in \mathcal{X}} g(x)P(X=x)\]</span>, if X is discrete,</p>
 <p>provided that the integral or sum exists.</p>
+<p>Note: The proof of expectation of binomial distribution can be found <a href="https://proofwiki.org/wiki/Expectation_of_Binomial_Distribution">here</a>.</p>
+<p><strong>Theorem 2.2.4</strong></p>
+<p>Let X be a random variable and let a, b and c be constants. Then for any functions <span class="math inline">\(g_1(x)\)</span> and <span class="math inline">\(g_2(x)\)</span> whose expectations exist,</p>
+<ul>
+<li><span class="math inline">\(E(ag_1(X) + bg_2(X) + c) = aE(g_1(X))+bE(g_2(X)) + c\)</span></li>
+<li>If <span class="math inline">\(g_1(x) \geq 0\)</span> for all x, then <span class="math inline">\(E(g_1(X)) \geq 0\)</span></li>
+<li>If <span class="math inline">\(g_1(x) \geq g_2(X)\)</span> for all x, then <span class="math inline">\(E(g_1(X)) \geq E(g_2(X))\)</span></li>
+<li>If <span class="math inline">\(a \leq g_1(x) \leq b\)</span> for all x, then <span class="math inline">\(a \leq E(g_1(x)) \leq b\)</span></li>
+</ul>
 </div>
 <div id="moments-and-moment-generating-functions" class="section level2">
 <h2><span class="header-section-number">3.3</span> Moments and Moment Generating Functions</h2>
+<p><strong>Definition 2.3.1</strong></p>
+<p>For each integer n, the nth <strong>moment</strong> of X (or <span class="math inline">\(F_X(x)\)</span>), <span class="math inline">\(\mu^{&#39;}_n = E(X^{n})\)</span>.</p>
+<p>The nth <strong>central moment</strong> of X, <span class="math inline">\(\mu^_n = E((X-\mu)^{n})\)</span>, where <span class="math inline">\(\mu = \mu_1^{&#39;} = E(X)\)</span>.</p>
+<p><strong>Definition 2.3.2</strong></p>
+<p>The <strong>variance</strong> of a random variable X is its <strong>second central moment</strong>, <span class="math inline">\(Var(X) = E((X-E(X))^2)\)</span>. The positive square root of Var(X) is the <strong>sandard deviation</strong> of X.</p>
+<p><strong>Theorem 2.3.4</strong></p>
+<p>If X is a random variable with finite variance, then for any constants a and b,</p>
+<p><span class="math display">\[Var(aX + b) = a^2 Var(X)\]</span></p>
+<p>Note: The proof of variance of binomial distribution can be found <a href="https://proofwiki.org/wiki/Variance_of_Binomial_Distribution">here</a>.</p>
+<p><strong>Definition 2.3.6</strong></p>
+<p>Let X be a random variable with cdf <span class="math inline">\(F_X\)</span>. The <strong>moment generating function(mgf)</strong> of X (or <span class="math inline">\(F_X\)</span>), denoted by <span class="math inline">\(M_X(t)\)</span>, is</p>
+<p><span class="math display">\[M_X(t) = E(e^{tX})\]</span></p>
+<p>provided that the epectation exists for t in some neighborhood of 0.</p>
+<p><strong>Theorem 2.3.7</strong></p>
+<p>If X has mgf <span class="math inline">\(M_X(t)\)</span>, then</p>
+<p><span class="math display">\[E(X^n) = M_X^{(n)}(0)\]</span></p>
+<p>where we define</p>
+<p><span class="math display">\[M_X^{(n)}(0) = \left.\frac{d^n}{dt^n}M_X(t)\right|_{t=0}\]</span></p>
+<p>That is, the nth moment is equal to the nth derivative of <span class="math inline">\(M_X(t)\)</span> evaluated at t=0.</p>
 </div>
 <div id="differentiating-under-an-integral-sign" class="section level2">
 <h2><span class="header-section-number">3.4</span> Differentiating Under an Integral Sign</h2>

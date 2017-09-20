@@ -31,6 +31,10 @@ Let X have cdf $F_X(x)$, let Y = g(X), and let $\mathcal{X} = \{ x: f_X(x) > 0\}
 - If g is an increasing function on $\mathcal{X}$, $F_Y(y) = F_X(g^{-1}(g))\text{ for }y \in \mathcal{Y}$
 - If g is a decreasing function on $\mathcal{X}$ and X is a continuous random variable, $F_Y(y) = 1-F_X(g^{-1}(y))\text{ for }y \in \mathcal{Y}$
 
+**Theorem 2.1.10**
+
+Let X have continuous cdf $F_X(x)$ and define the random variable Y as Y = $F_X(X)$. Then Y is uniformly distributed on (0,1), that is, $P(Y \leq y) = y, 0<y<1$.
+
 ## Expected Values
 
 **Definition 2.2.1**
@@ -43,7 +47,56 @@ $$E(g(x)) = \sum_{x \in \mathcal{X}} g(x)f_X(x) = \sum_{x \in \mathcal{X}} g(x)P
 
 provided that the integral or sum exists.
 
+Note: The proof of expectation of binomial distribution can be found [here](https://proofwiki.org/wiki/Expectation_of_Binomial_Distribution).
+
+**Theorem 2.2.4**
+
+Let X be a random variable and let a, b and c be constants. Then for any functions $g_1(x)$ and $g_2(x)$ whose expectations exist,
+
+- $E(ag_1(X) + bg_2(X) + c) = aE(g_1(X))+bE(g_2(X)) + c$
+- If $g_1(x) \geq 0$ for all x, then $E(g_1(X)) \geq 0$
+- If $g_1(x) \geq g_2(X)$ for all x, then $E(g_1(X)) \geq E(g_2(X))$
+- If $a \leq g_1(x) \leq b$ for all x, then $a \leq E(g_1(x)) \leq b$
+
 ## Moments and Moment Generating Functions
+
+**Definition 2.3.1**
+
+For each integer n, the nth **moment** of X (or $F_X(x)$), $\mu^{'}_n = E(X^{n})$.
+
+The nth **central moment** of X, $\mu^_n = E((X-\mu)^{n})$, where $\mu = \mu_1^{'} = E(X)$.
+
+**Definition 2.3.2**
+
+The **variance** of a random variable X is its **second central moment**, $Var(X) = E((X-E(X))^2)$. The positive square root of Var(X) is the **sandard deviation** of X.
+
+**Theorem 2.3.4**
+
+If X is a random variable with finite variance, then for any constants a and b, 
+
+$$Var(aX + b) = a^2 Var(X)$$
+
+Note: The proof of variance of binomial distribution can be found [here](https://proofwiki.org/wiki/Variance_of_Binomial_Distribution).
+
+**Definition 2.3.6**
+
+Let X be a random variable with cdf $F_X$. The **moment generating function(mgf)** of X (or $F_X$), denoted by $M_X(t)$, is
+
+$$M_X(t) = E(e^{tX})$$
+
+provided that the epectation exists for t in some neighborhood of 0.
+
+**Theorem 2.3.7**
+
+If X has mgf $M_X(t)$, then
+
+$$E(X^n) = M_X^{(n)}(0)$$
+
+where we define
+
+$$M_X^{(n)}(0) = \left.\frac{d^n}{dt^n}M_X(t)\right|_{t=0}$$
+
+That is, the nth moment is equal to the nth derivative of $M_X(t)$ evaluated at t=0.
 
 ## Differentiating Under an Integral Sign
 
