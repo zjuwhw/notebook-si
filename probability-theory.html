@@ -371,15 +371,89 @@ Published with <a href="https://github.com/rstudio/bookdown" target="blank">book
 <p><strong>Definition 1.3.2</strong></p>
 <p>If A and B are events in S, and P(B) &gt; 0, then the conditional probability of A given B, written P(A|B), is</p>
 <p><span class="math display">\[P(A|B) = \frac{P(A\cap B)}{P(B)}\]</span></p>
+<p><strong>Theorem 1.3.5 (Bayes’ Rule)</strong></p>
+<p>Let <span class="math inline">\(A_1, A_2, ...\)</span> be a partition of the sample space, and let B be any set. Then, for each i = 1,2,…,</p>
+<p><span class="math display">\[P(A_i|B) = \frac{P(B|A_i)P(A_i)}{\sum_{j=1}^{\infty} P(B|A_j)P(A_j)}\]</span></p>
+<p><strong>Definition 1.3.7</strong></p>
+<p>Two events, A and B, are statistically independent if</p>
+<p><span class="math display">\[P(A\cap B) = P(A) P(B)\]</span></p>
+<p><strong>Theorem 1.3.9</strong></p>
+<p>If A and B are independent events, then the following pairs are also independent:</p>
+<ul>
+<li>A and <span class="math inline">\(B^c\)</span></li>
+<li><span class="math inline">\(A^c\)</span> and B</li>
+<li><span class="math inline">\(A^c\)</span> and <span class="math inline">\(B^c\)</span></li>
+</ul>
+<p><strong>Definition 1.3.12</strong></p>
+<p>A collection of events <span class="math inline">\(A_1, A_2, ..., A_n\)</span> are mutually independent if for any subcollection <span class="math inline">\(A_{i1}, ...., A_{ik}\)</span>, we have</p>
+<p><span class="math display">\[P(\cap^k_{j=1}A_{ij}) = \prod_{j=1}^{k}P(A_{ij})\]</span></p>
 </div>
 <div id="random-variables" class="section level2">
 <h2><span class="header-section-number">2.4</span> Random Variables</h2>
+<p><strong>Definition 1.4.1</strong></p>
+<p>A <strong>random variable</strong> is a function from a sample space S into the real numbers.</p>
+<p><strong>Example 1.4.2 (Random Variables)</strong></p>
+<p>Examples of random variables</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Experiment</th>
+<th align="left">Random variable</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Toss two dice</td>
+<td align="left">X = sum of the numbers</td>
+</tr>
+<tr class="even">
+<td align="left">Toss a coin 25 times</td>
+<td align="left">X = number of heads in 25 tosses</td>
+</tr>
+<tr class="odd">
+<td align="left">Apply different amouts of fertilizer to corn plants</td>
+<td align="left">X = yield/acre</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="distribution-functions" class="section level2">
 <h2><span class="header-section-number">2.5</span> Distribution Functions</h2>
+<p><strong>Definition 1.5.1</strong></p>
+<p>The <strong>cumulative distribution function</strong> or <strong>cdf</strong> of a random variable X, denoted by <span class="math inline">\(F_X(x)\)</span>, is defined by</p>
+<p><span class="math display">\[F_X(x) = P_X(X \leq x)\]</span>, for all x.</p>
+<p><strong>Theorem 1.5.3</strong></p>
+<p>The function F(x) is a cdf if and only if the following three conditions hold:</p>
+<ul>
+<li><span class="math inline">\(lim_{x \to -\infty}F(x) = 0\)</span> and <span class="math inline">\(lim_{x \to \infty}F(x) = 1\)</span></li>
+<li>F(x) is a nondecreasing function of x</li>
+<li>F(x) is right-continuous, that is, for every number <span class="math inline">\(x_0\)</span>, <span class="math inline">\(lim_{x \downarrow x_0}F(x) = F(x_0)\)</span></li>
+</ul>
+<p><strong>Definition 1.5.7</strong></p>
+<p>A random variable X is continuous if <span class="math inline">\(F_X(x)\)</span> is a continuous function of x. A random variable X is discrete if <span class="math inline">\(F_X(x)\)</span> is a step function of x.</p>
+<p><strong>Definition 1.5.8</strong></p>
+<p>The random variables X and Y are identically distributed if, for every set <span class="math inline">\(A \in \mathcal{B}^1, P(X \in A) = P(Y \in A)\)</span></p>
+<p><strong>Theorem 1.5.10</strong></p>
+<p>The following two statments are equivalent:</p>
+<ul>
+<li>The random variables X and Y are identically distributed</li>
+<li><span class="math inline">\(F_X(x) = F_Y(x)\)</span> for every x</li>
+</ul>
 </div>
 <div id="density-and-mass-functions" class="section level2">
 <h2><span class="header-section-number">2.6</span> Density and Mass Functions</h2>
+<p><strong>Definition 1.6.1</strong></p>
+<p>The <strong>probability mass function (pmf)</strong> of a discrete random variable X is given by</p>
+<p><span class="math display">\[f_X(x) = P(X=x)\]</span> for all x</p>
+<p><strong>Definition 1.6.3</strong></p>
+<p>The <strong>probability density function</strong>, or <strong>pdf</strong>, <span class="math inline">\(f_X(x)\)</span>, of a continuous random variable X is the function that satisfies</p>
+<p><span class="math display">\[F_X(x) = \int_{-\infty}^{x} f_X(t) dt\]</span> for all x</p>
+<p><strong>Theorem 1.6.5</strong></p>
+<p>A function <span class="math inline">\(f_X(x)\)</span> is a pdf (or pmf) of a random variable X if and only if</p>
+<ul>
+<li><span class="math inline">\(f_X(x) \geq 0\)</span> for all x</li>
+<li><span class="math inline">\(\sum_x f_X(x) = 1 (pmf)\)</span> or <span class="math inline">\(\int_{-\infty}^{\infty}f_X(x) dx = 1 (pdf)\)</span></li>
+</ul>
 </div>
 <div id="miscellanea" class="section level2">
 <h2><span class="header-section-number">2.7</span> Miscellanea</h2>

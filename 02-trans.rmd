@@ -2,7 +2,46 @@
 
 ## Distributions of Functions of a Random Variable
 
+If X is a random variable with cdf $F_X(x)$, then any function of X, say g(X), is also a random variable. We set Y=g(X), then
+
+$$P(Y \in A) = P(g(X) \in A)$$
+
+Formally, if we write y = g(x), the function g(x) defines a mapping from the original sample space of X, $\mathcal{X}$, to a new sample space, $\mathcal{Y}$, the sample space of the random variable Y. That is,
+
+$$g(x): \mathcal{X} \to \mathcal{Y}$$
+
+We associate with g an inverse mapping, denoted by $g^{-1)$,
+
+$$g^{-1}(A) = \{ x \in \mathcal{X}: g(x) \in A\}$$
+
+If the random variable Y is now defined by Y = g(X), we can write for any set $A \subset \mathcal{Y}$,
+
+$$P(Y \in A) = P(g(X) \in A) = P(\{x\in\mathcal{X}: g(x) \in A\} = P(X \in g^{-1}(A))$$
+
+If Y is a discrete random variable, the pmf for Y is
+
+$$f_Y(y) = P(Y=y) = \sum_{x \in g^{-1}(y)}P(X=x) =\sum_{x \in g^{-1}(y)}f_X(x),\text{ for }y \in \mathcal{Y}$$
+
+It's easiest to deal with function g(x) that are monotone, that is those that satisfy either increasing or decreasing. It the transformation x --> g(x) is monotone, then it is one-to-one and onto from $\mathcal{X} \to \mathcal{Y}$.
+
+**Theorem 2.1.3**
+
+Let X have cdf $F_X(x)$, let Y = g(X), and let $\mathcal{X} = \{ x: f_X(x) > 0\}$, $\mathcal{Y} = \{y: y = g(x)\text{ for some }x \in \mathcal{X}\}$.
+
+- If g is an increasing function on $\mathcal{X}$, $F_Y(y) = F_X(g^{-1}(g))\text{ for }y \in \mathcal{Y}$
+- If g is a decreasing function on $\mathcal{X}$ and X is a continuous random variable, $F_Y(y) = 1-F_X(g^{-1}(y))\text{ for }y \in \mathcal{Y}$
+
 ## Expected Values
+
+**Definition 2.2.1**
+
+The **expected value** or **mean** of a random varaible g(X), denoted by E(g(X)), is
+
+$$E(g(X)) = \int_{-\infty}^{\infty} g(x)f_X(x)dx$$, if X is continuous
+
+$$E(g(x)) = \sum_{x \in \mathcal{X}} g(x)f_X(x) = \sum_{x \in \mathcal{X}} g(x)P(X=x)$$, if X is discrete,
+
+provided that the integral or sum exists.
 
 ## Moments and Moment Generating Functions
 
