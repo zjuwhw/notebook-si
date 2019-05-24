@@ -274,7 +274,7 @@ Published with <a href="https://github.com/rstudio/bookdown" target="blank">book
 <h1><span class="header-section-number">3</span> Transformations and Expectations</h1>
 <div id="distributions-of-functions-of-a-random-variable" class="section level2">
 <h2><span class="header-section-number">3.1</span> Distributions of Functions of a Random Variable</h2>
-<p>If X is a random variable with cdf <span class="math inline">\(F_X(x)\)</span>, then any function of X, say g(X), is also a random variable. We set Y=g(X), then</p>
+<p>If X is a random variable with cdf <span class="math inline">\(F_X(x)\)</span>, then any function of X, say g(X), is also a random variable. We set Y=g(X), then for any set A</p>
 <p><span class="math display">\[P(Y \in A) = P(g(X) \in A)\]</span></p>
 <p>Formally, if we write y = g(x), the function g(x) defines a mapping from the original sample space of X, <span class="math inline">\(\mathcal{X}\)</span>, to a new sample space, <span class="math inline">\(\mathcal{Y}\)</span>, the sample space of the random variable Y. That is,</p>
 <p><span class="math display">\[g(x): \mathcal{X} \to \mathcal{Y}\]</span></p>
@@ -285,13 +285,22 @@ Published with <a href="https://github.com/rstudio/bookdown" target="blank">book
 <p>If Y is a discrete random variable, the pmf for Y is</p>
 <p><span class="math display">\[f_Y(y) = P(Y=y) = \sum_{x \in g^{-1}(y)}P(X=x) =\sum_{x \in g^{-1}(y)}f_X(x),\text{ for }y \in \mathcal{Y}\]</span></p>
 <p>It’s easiest to deal with function g(x) that are monotone, that is those that satisfy either increasing or decreasing. It the transformation x –&gt; g(x) is monotone, then it is one-to-one and onto from <span class="math inline">\(\mathcal{X} \to \mathcal{Y}\)</span>.</p>
+<p><strong>Example 2.1.1</strong> Binomial transformation</p>
+<p><strong>Example 2.1.2</strong> Uniform transformation</p>
 <p><strong>Theorem 2.1.3</strong></p>
 <p>Let X have cdf <span class="math inline">\(F_X(x)\)</span>, let Y = g(X), and let <span class="math inline">\(\mathcal{X} = \{ x: f_X(x) &gt; 0\}\)</span>, <span class="math inline">\(\mathcal{Y} = \{y: y = g(x)\text{ for some }x \in \mathcal{X}\}\)</span>.</p>
 <ul>
 <li>If g is an increasing function on <span class="math inline">\(\mathcal{X}\)</span>, <span class="math inline">\(F_Y(y) = F_X(g^{-1}(g))\text{ for }y \in \mathcal{Y}\)</span></li>
 <li>If g is a decreasing function on <span class="math inline">\(\mathcal{X}\)</span> and X is a continuous random variable, <span class="math inline">\(F_Y(y) = 1-F_X(g^{-1}(y))\text{ for }y \in \mathcal{Y}\)</span></li>
 </ul>
-<p><strong>Theorem 2.1.10</strong></p>
+<p><strong>Example 2.1.4</strong> Uniform-exponenetial relationship-I</p>
+<p><strong>Theorem 2.1.5</strong></p>
+<p>Let X have pdf <span class="math inline">\(f_X(x)\)</span> and let <span class="math inline">\(Y=g(X)\)</span>, where g is a monotone function. Let <span class="math inline">\(\mathcal{X} = \{ x: f_X(x) &gt; 0\}\)</span>, <span class="math inline">\(\mathcal{Y} = \{y: y = g(x)\text{ for some }x \in \mathcal{X}\}\)</span>. Suppose that <span class="math inline">\(f_X(x)\)</span> is continuous on <span class="math inline">\(\mathcal{X}\)</span> and that <span class="math inline">\(g^{-1}(y)\)</span> has a continuous derivative on <span class="math inline">\(\mathcal{Y}\)</span>. THen the pdf of Y is given by</p>
+<p><span class="math display">\[f_Y(y)= \begin{cases}f_X(g^{-1}(y))|\frac{d}{dy}g^{-1}(y)| &amp; \quad y \in \mathcal{Y} \\ 0 &amp; \quad \text{otherwise}\end{cases}\]</span></p>
+<p><strong>Example 2.1.6</strong> Inverted gamma pdf</p>
+<p><strong>Example 2.1.7</strong> Square transformation</p>
+<p><strong>Example 2.1.9</strong> Normal-chi squared relationship</p>
+<p><strong>Theorem 2.1.10</strong> Probability integral transformation</p>
 <p>Let X have continuous cdf <span class="math inline">\(F_X(x)\)</span> and define the random variable Y as Y = <span class="math inline">\(F_X(X)\)</span>. Then Y is uniformly distributed on (0,1), that is, <span class="math inline">\(P(Y \leq y) = y, 0&lt;y&lt;1\)</span>.</p>
 </div>
 <div id="expected-values" class="section level2">
@@ -302,7 +311,7 @@ Published with <a href="https://github.com/rstudio/bookdown" target="blank">book
 <p><span class="math display">\[E(g(x)) = \sum_{x \in \mathcal{X}} g(x)f_X(x) = \sum_{x \in \mathcal{X}} g(x)P(X=x)\]</span>, if X is discrete,</p>
 <p>provided that the integral or sum exists.</p>
 <p>Note: The proof of expectation of binomial distribution can be found <a href="https://proofwiki.org/wiki/Expectation_of_Binomial_Distribution">here</a>.</p>
-<p><strong>Theorem 2.2.4</strong></p>
+<p><strong>Theorem 2.2.5</strong></p>
 <p>Let X be a random variable and let a, b and c be constants. Then for any functions <span class="math inline">\(g_1(x)\)</span> and <span class="math inline">\(g_2(x)\)</span> whose expectations exist,</p>
 <ul>
 <li><span class="math inline">\(E(ag_1(X) + bg_2(X) + c) = aE(g_1(X))+bE(g_2(X)) + c\)</span></li>

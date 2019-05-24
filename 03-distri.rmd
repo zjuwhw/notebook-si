@@ -8,6 +8,8 @@ This family is indexed by one or more parameters, which allow us to vary certian
 
 ## Discrete Distributions
 
+A random variable X is said to have a discrete distribution if the range of X, the sample space, is countable.
+
 **Discrete Uniform Distribution**
 
 A random variable X has a discrete uniform (1,N) distribution if
@@ -16,17 +18,55 @@ $$P(X=x|N) = \frac{1}{N}, x = 1,2,3,...,N$$,
 
 where N is a specified integer.
 
+$$E(X) = \sum_{x=1}^N x \frac{1}{N} = \frac{N+1}{2} $$
 
+$$Var(X) = E(X^2) - [E(X)]^2 = \frac{(N+1)(2N+1)}{6} - (\frac{N+1}{2})^2 = \frac{(N+1)(N-1)}{12}$$
+
+**Hypergeometric Distribution**
+
+**Binomial Distribution**
+
+**Poisson Distribution**
+
+**Negative Binomial Distribution**
+
+**Geometric Distribution**
 
 ## Continuous Distributions
 
+**Uniform Distribution**
+
+**Gamma Distribution**
+
+**Normal Distribution**
+
+**Beta Distribution**
+
+**Cauchy Distribution**
+
+**Lognormal Distribution**
+
+**Double Exponential Distribution**
+
 ## Exponential Families
 
+A family of pdfs or pmfs is called an exponential family if it can be expressed as
+
+$$f(x|\boldsymbol{\theta}) = h(x)c(\boldsymbol{\theta})exp(\sum_{i=1}^kw_i(\boldsymbol{\theta})t_i(x))$$.
+
+Here $h(x) \geq 0$ and $t_1(x),...,t_k(x)$ are real-valued functions of the observation x (they cannot depend on $\boldsymbol{\theta}$), and $c(\boldsymbol{\theta}) \geq 0$ and $w_1(\boldsymbol{\theta}), ..., w_k(\boldsymbol{\theta})$ are real-valued functions of the possible vector-valued parameter $\boldsymbol{\theta}$ (they cannot depend on x).
+
+Many common families are exponential families, including the continuous families (normal, gamma, and beta), and the discrete families (binomial, Poisson, and negative binomial).
+
 ## Location and Scale Families
+
+Three techniques for constructing families of distributions. The three types of families are called location families, scale families, and location-scale families.
 
 ## Inequalities and Identities
 
 ### Probability Inequalities
+
+The most famous, and perhaps most useful, probability inequality is Chebychev's Inequality.
 
 ### Identities
 

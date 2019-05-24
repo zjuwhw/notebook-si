@@ -274,9 +274,36 @@ Published with <a href="https://github.com/rstudio/bookdown" target="blank">book
 <h1><span class="header-section-number">5</span> Multiple Random Variables</h1>
 <div id="joint-and-marginal-distributions" class="section level2">
 <h2><span class="header-section-number">5.1</span> Joint and Marginal Distributions</h2>
+<p>The probability models and computation of probability for events involving <em>only one</em> random variable are called <em>univariate models</em>. The probability models that involve <em>more than one</em> random variable are called <em>multivariate models</em>. The models involving two random variables are called <em>bivariate models</em>.</p>
+<p><strong>Definition 4.1.1</strong> An <em>n-dimensional random vector</em> is a function from a sample space S into <span class="math inline">\(R^n\)</span>, n-dimensional Euclidean space.</p>
+<p><strong>Definition 4.1.3</strong> Let (X,Y) be a discrete bivariate random vector. Then the function <span class="math inline">\(f(x,y)\)</span> from <span class="math inline">\(R^2\)</span> into R defined by <span class="math inline">\(f(x,y) = P(X=x,y=y)\)</span> is called the <em>joint probability mass function or joint pmf</em> of (X,Y). If it is necessary to stress the fact that <span class="math inline">\(f\)</span> is the joint pmf of the vector (X,Y) rather than some other vector, the notation <span class="math inline">\(f_{X,Y}(x,y)\)</span> will be used.</p>
+<p><strong>Theorem 4.1.6</strong> Let (X,Y) be a discrete bivariate random vector with joint pmf <span class="math inline">\(f_{X,Y}(x,y)\)</span>. Then the <em>marginal pmfs</em> of X and Y, <span class="math inline">\(f_X(x) = P(X=x)\)</span> and <span class="math inline">\(f_Y(y)=P(Y=y)\)</span>, are given by</p>
+<p><span class="math display">\[f_X(x) = \sum_{y \in R} f_{X,Y}(x,y)\text{ and }f_Y(y) = \sum_{x \in R} f_{X,Y}(x,y)\]</span></p>
+<p><strong>Definition 4.1.10</strong> A function <span class="math inline">\(f(x,y)\)</span> from <span class="math inline">\(R^2\)</span> into R is called a <em>joint probability density function or joint pdf of the continuous bivariate random vector</em> (X,Y) if, for every <span class="math inline">\(A \subset R^2\)</span>,</p>
+<p><span class="math display">\[P((X,Y) \in A) = \int_A \int f(x,y)dxdy\]</span></p>
+<p>The marginal probability density functions of X and Y are given by</p>
+<p><span class="math display">\[f_X(x) = \int_{-\infty}^{\infty}f(x,y)dy,\text{ } -\infty &lt; x &lt; \infty\]</span></p>
+<p><span class="math display">\[f_Y(y) = \int_{-\infty}^{\infty}f(x,y)dx,\text{ }-\infty&lt; y&lt; \infty\]</span></p>
+<p>The joint cdf (cumulative distribution function) is the function F(x,y) defined by for a discrete random vector,</p>
+<p><span class="math display">\[F(x,y) = P(X \leq x, Y \leq y)\]</span></p>
+<p>or for a continuous bivariate random vector,</p>
+<p><span class="math display">\[F(x,y) = \int_{-\infty}^x\int_{-\infty}^y f(s,t) dt ds\]</span></p>
 </div>
 <div id="conditional-distributions-and-independence" class="section level2">
 <h2><span class="header-section-number">5.2</span> Conditional Distributions and Independence</h2>
+<p><strong>Definition 4.2.1</strong> Let (X,Y) be a discrete bivariate random vector with joint pmf f(x,y) and marginal pmfs <span class="math inline">\(f_X(x)\)</span> and <span class="math inline">\(f_Y(y)\)</span>. For any x such that <span class="math inline">\(P(X=x)=f_X(x) &gt; 0\)</span>, the <em>conditional pmf</em> of Y given that X=x is the function of y denoted by f(y|x) and definied by</p>
+<p><span class="math display">\[f(y|x) = P(Y=y|X=x) = \frac{f(x,y)}{f_X(x)}\]</span></p>
+<p><strong>Definition 4.2.3</strong> Let (X,Y) be a continuous bivariate random vector with joint pdf f(x,y) and marginal pdfs <span class="math inline">\(f_X(x)\)</span> and <span class="math inline">\(f_Y(y)\)</span>. For any x such that <span class="math inline">\(f_X(x) &gt; 0\)</span>, the <em>conditional pdf</em> of Y given that X=x is the function of y denoted by f(y|x) and defined by</p>
+<p><span class="math display">\[f(y|x) = \frac{f(x,y)}{f_X(x)}\]</span></p>
+<p><strong>Definition 4.2.5</strong> Let (X,Y) be a bivariate random vector with joint pdf or pmf f(x,y) and marginal pdfs or pmfs <span class="math inline">\(f_X(x)\)</span> and <span class="math inline">\(f_Y(y)\)</span>. Then X and Y are called <em>independent random variables</em> if, for every <span class="math inline">\(x \in R\text{ and }y \in R\)</span>,</p>
+<p><span class="math display">\[f(x,y) = f_X(x)f_Y(y)\]</span></p>
+<p><strong>Theorem 4.2.10</strong> Let X and Y be independent random variables.</p>
+<ol style="list-style-type: lower-alpha">
+<li>For any <span class="math inline">\(A \subset R\text{ and } B \subset R\)</span>, <span class="math inline">\(P(X \in A, Y \in B) = P(X \in A) P(Y \in B)\)</span>; that is, the events {X A} and {Y B} are independent events.</li>
+<li>Let g(x) be a function only of x and h(y) be a function only of y. Then <span class="math inline">\(E(g(X)h(Y)) = E(g(X))E(h(Y))\)</span>.</li>
+</ol>
+<p><strong>Theorem 4.2.12</strong> Let X and Y be independet random variables with moment generating functions <span class="math inline">\(M_X(t)\)</span> and <span class="math inline">\(M_Y(t)\)</span>. Then the moment generating function of the random variable Z = X + Y is given by <span class="math inline">\(M_Z(t) = M_X(t)M_Y(t)\)</span></p>
+<p><strong>Theorem 4.2.14</strong> Let <span class="math inline">\(X \sim n(\mu, \sigma^2)\text{ and }Y \sim n(\gamma, \tau^2)\)</span> be independent normal random variables. Then the random variable Z = X + Y has a <span class="math inline">\(n(\mu+\gamma, \sigma^2 + \tau^2)\)</span> distribution.</p>
 </div>
 <div id="bivariate-transformations" class="section level2">
 <h2><span class="header-section-number">5.3</span> Bivariate Transformations</h2>

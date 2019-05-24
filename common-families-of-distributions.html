@@ -279,24 +279,45 @@ Published with <a href="https://github.com/rstudio/bookdown" target="blank">book
 </div>
 <div id="discrete-distributions" class="section level2">
 <h2><span class="header-section-number">4.2</span> Discrete Distributions</h2>
+<p>A random variable X is said to have a discrete distribution if the range of X, the sample space, is countable.</p>
 <p><strong>Discrete Uniform Distribution</strong></p>
 <p>A random variable X has a discrete uniform (1,N) distribution if</p>
 <p><span class="math display">\[P(X=x|N) = \frac{1}{N}, x = 1,2,3,...,N\]</span>,</p>
 <p>where N is a specified integer.</p>
+<p><span class="math display">\[E(X) = \sum_{x=1}^N x \frac{1}{N} = \frac{N+1}{2} \]</span></p>
+<p><span class="math display">\[Var(X) = E(X^2) - [E(X)]^2 = \frac{(N+1)(2N+1)}{6} - (\frac{N+1}{2})^2 = \frac{(N+1)(N-1)}{12}\]</span></p>
+<p><strong>Hypergeometric Distribution</strong></p>
+<p><strong>Binomial Distribution</strong></p>
+<p><strong>Poisson Distribution</strong></p>
+<p><strong>Negative Binomial Distribution</strong></p>
+<p><strong>Geometric Distribution</strong></p>
 </div>
 <div id="continuous-distributions" class="section level2">
 <h2><span class="header-section-number">4.3</span> Continuous Distributions</h2>
+<p><strong>Uniform Distribution</strong></p>
+<p><strong>Gamma Distribution</strong></p>
+<p><strong>Normal Distribution</strong></p>
+<p><strong>Beta Distribution</strong></p>
+<p><strong>Cauchy Distribution</strong></p>
+<p><strong>Lognormal Distribution</strong></p>
+<p><strong>Double Exponential Distribution</strong></p>
 </div>
 <div id="exponential-families" class="section level2">
 <h2><span class="header-section-number">4.4</span> Exponential Families</h2>
+<p>A family of pdfs or pmfs is called an exponential family if it can be expressed as</p>
+<p><span class="math display">\[f(x|\boldsymbol{\theta}) = h(x)c(\boldsymbol{\theta})exp(\sum_{i=1}^kw_i(\boldsymbol{\theta})t_i(x))\]</span>.</p>
+<p>Here <span class="math inline">\(h(x) \geq 0\)</span> and <span class="math inline">\(t_1(x),...,t_k(x)\)</span> are real-valued functions of the observation x (they cannot depend on <span class="math inline">\(\boldsymbol{\theta}\)</span>), and <span class="math inline">\(c(\boldsymbol{\theta}) \geq 0\)</span> and <span class="math inline">\(w_1(\boldsymbol{\theta}), ..., w_k(\boldsymbol{\theta})\)</span> are real-valued functions of the possible vector-valued parameter <span class="math inline">\(\boldsymbol{\theta}\)</span> (they cannot depend on x).</p>
+<p>Many common families are exponential families, including the continuous families (normal, gamma, and beta), and the discrete families (binomial, Poisson, and negative binomial).</p>
 </div>
 <div id="location-and-scale-families" class="section level2">
 <h2><span class="header-section-number">4.5</span> Location and Scale Families</h2>
+<p>Three techniques for constructing families of distributions. The three types of families are called location families, scale families, and location-scale families.</p>
 </div>
 <div id="inequalities-and-identities" class="section level2">
 <h2><span class="header-section-number">4.6</span> Inequalities and Identities</h2>
 <div id="probability-inequalities" class="section level3">
 <h3><span class="header-section-number">4.6.1</span> Probability Inequalities</h3>
+<p>The most famous, and perhaps most useful, probability inequality is Chebychev’s Inequality.</p>
 </div>
 <div id="identities" class="section level3">
 <h3><span class="header-section-number">4.6.2</span> Identities</h3>
