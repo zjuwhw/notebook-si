@@ -116,6 +116,8 @@ $$M_X^{(n)}(0) = \left.\frac{d^n}{dt^n}M_X(t)\right|_{t=0}$$
 
 That is, the nth moment is equal to the nth derivative of $M_X(t)$ evaluated at t=0.
 
+*kernel*: the kernel of a function is the main part of the function, the part that remains when constants are disregarded.
+
 ## Differentiating Under an Integral Sign
 
 ## Miscellanea

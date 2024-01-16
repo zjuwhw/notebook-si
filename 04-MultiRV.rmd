@@ -55,9 +55,76 @@ b. Let g(x) be a function only of x and h(y) be a function only of y. Then $E(g(
 
 ## Bivariate Transformations
 
+Let $(X,Y)$ be a bivariate random vector with a know probability distribution. Now consider a new bivariate random vector $(U,V)$ defined by $U=g_1(X,Y)$ and $V=g_2(X,Y)$, where $g_1(x,y)$ and $g_2(x,y)$ are some specified function.
+
+**Theorem 4.3.2** If $X \sim Poisson(\theta)$ and $Y \sim Poisson(\lambda)$, and X and Y are independent, then $X+Y \sim Poisson(\theta+\lambda)$
+
+Consider $(X,Y)$ is a continuous random vector with joint pdf $f_{X,Y}(x,y)$, assume the transformation $u=g_1(x,y)$ and $v=g_2(x,y)$ are one-to-one transformation, denote the inverse transformation by $x=h_1(u,v)$ and $y=h_2)u,v$, the joint pdf of (U,V) is given by 
+
+**Equation 4.3.2** $f_{U,V}(u,v)=f_{X,Y}(h_1(u,v), h2(u,v))|J|$
+
+, where J is the determinant of a matrix of partial derivateives (Jacobian of the transofrmations)
+
+$$J=\begin{vmatrix} \frac{\partial x}{\partial u} &  \frac{\partial x}{\partial v} \\ \frac{\partial y}{\partial u} &  \frac{\partial y}{\partial v} \end{vmatrix}=\frac{\partial x}{\partial u} \frac{\partial y}{\partial v}-\frac{\partial x}{\partial v} \frac{\partial y}{\partial u}$$
+
+**Theorem 4.3.5** Let X and Y be independent random variables. Let $g(x)$ be a function only of x and $h(y)$ be a function only of y. Then the random variables $U=g(X)$ and $V=h(Y)$ are independent.
+
+**Example 4.3.6 (Distribution of the ratio of normal variables)** The ratio of two independent standard normal random variables is a Cauchy random variable.
+
 ## Hierarchical Models and Mixtrue Distributions
 
+**Example 4.4.1 (Binomial-Poisson hierarchy)**
+
+Complicated processes may be modeled by a sequence of relatively simple models placed in a hierarchy
+
+Dealing with the hierarchy, dealing with conditional and marginal distributions
+
+**Theorem 4.4.3** If X and Y are any two random variables, then
+
+$$EX=E(E(X|Y))$$
+
+, provided that the expectations exist
+
+**Mixture distribution** refers to a distribution arising from a hierarchical structure.
+
+**Definition 4.4.4** A random variable X is said to have a mixture distribution if the distribution of X depends on a quantity that also has a distribution.
+
+the hierarchy at two stages, multistage hierarchy
+
+**noncentral chi-squared distribution** the pdf for p degrees of freedom and noncentrality parameter $\lambda$ is given by
+
+$$f(x|\lambda, p)=\sum_{k=0}^{\infty}\frac{x^{p/2+k-1}e^{-x/2}}{\Gamma(p/2+k)2^{p/2+k}}\frac{\lambda ^ke^{-\lambda}}{k!}$$
+
+This can be seen as a mixture distribution, made up of central chi-squared densities and Poisson distributions. That is
+
+$$X|K \sim \chi^2_{p+2K}$$
+
+$$K \sim Poisson(\lambda)$$
+
+So
+
+$$EX = E(E(X|K))=E(p+2K)=p+2\lambda$$
+
+**Theorem 4.4.7 (Conditional variance identity)** For any two random variables X and Y,
+
+$$Var X = E(Var(X|Y))+Var(E(X|Y))$$
+
 ## Covariance and Correlation
+
+covariance and correlation: two numerical measures of the strength of a relationship between two random variables
+
+Notation: $EX=\mu_X$, $EY=\mu_Y$, $Var X=\sigma^2_X$, and $Var Y=\sigma^2_Y$
+
+**Definition 4.5.1** The covariance of X and Y is the number defined by
+
+$$Cov(X,Y)=E((X-\mu_X)(Y-\mu_Y))$$
+
+**Definition 4.5.2** The correlation of X and Y is the number defined by
+
+$$\rho_{XY}=\frac{Cov(X,Y)}{\sigma_X\sigma_Y}$$
+
+, where the value $\rho_{XY}$ is called the correlation coefficient.
+
 
 ## Multivariate Distributions
 

@@ -1,23 +1,21 @@
 <!DOCTYPE html>
-<html >
-
+<html lang="" xml:lang="">
 <head>
 
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title></title>
-  <meta name="description" content="">
-  <meta name="generator" content="bookdown 0.5 and GitBook 2.6.7">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>6 Principles of Data Reduction | _main.knit</title>
+  <meta name="description" content="" />
+  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="" />
+  <meta property="og:title" content="6 Principles of Data Reduction | _main.knit" />
   <meta property="og:type" content="book" />
-  
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="" />
+  <meta name="twitter:title" content="6 Principles of Data Reduction | _main.knit" />
   
   
   
@@ -25,25 +23,33 @@
 
 
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="properties-of-a-random-sample.html">
-<link rel="next" href="point-estimation.html">
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link rel="prev" href="properties-of-a-random-sample.html"/>
+<link rel="next" href="point-estimation.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
 
 
 
 
 
 
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
 
@@ -63,192 +69,226 @@
 <li><a href="./">Notebook for SI</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preface</a></li>
-<li class="chapter" data-level="2" data-path="probability-theory.html"><a href="probability-theory.html"><i class="fa fa-check"></i><b>2</b> Probability Theory</a><ul>
-<li class="chapter" data-level="2.1" data-path="probability-theory.html"><a href="probability-theory.html#set-theory"><i class="fa fa-check"></i><b>2.1</b> Set Theory</a></li>
-<li class="chapter" data-level="2.2" data-path="probability-theory.html"><a href="probability-theory.html#basics-of-probability-theory"><i class="fa fa-check"></i><b>2.2</b> Basics of Probability Theory</a><ul>
-<li class="chapter" data-level="2.2.1" data-path="probability-theory.html"><a href="probability-theory.html#axiomatic-foundations"><i class="fa fa-check"></i><b>2.2.1</b> Axiomatic（公理的） Foundations</a></li>
-<li class="chapter" data-level="2.2.2" data-path="probability-theory.html"><a href="probability-theory.html#the-calculus-of-probabilities"><i class="fa fa-check"></i><b>2.2.2</b> The Calculus of Probabilities</a></li>
-<li class="chapter" data-level="2.2.3" data-path="probability-theory.html"><a href="probability-theory.html#counting"><i class="fa fa-check"></i><b>2.2.3</b> Counting</a></li>
-<li class="chapter" data-level="2.2.4" data-path="probability-theory.html"><a href="probability-theory.html#enumerating-outcomes"><i class="fa fa-check"></i><b>2.2.4</b> Enumerating Outcomes</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="probability-theory.html"><a href="probability-theory.html"><i class="fa fa-check"></i><b>1</b> Probability Theory</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="probability-theory.html"><a href="probability-theory.html#set-theory"><i class="fa fa-check"></i><b>1.1</b> Set Theory</a></li>
+<li class="chapter" data-level="1.2" data-path="probability-theory.html"><a href="probability-theory.html#basics-of-probability-theory"><i class="fa fa-check"></i><b>1.2</b> Basics of Probability Theory</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="probability-theory.html"><a href="probability-theory.html#axiomatic公理的-foundations"><i class="fa fa-check"></i><b>1.2.1</b> Axiomatic（公理的） Foundations</a></li>
+<li class="chapter" data-level="1.2.2" data-path="probability-theory.html"><a href="probability-theory.html#the-calculus-of-probabilities"><i class="fa fa-check"></i><b>1.2.2</b> The Calculus of Probabilities</a></li>
+<li class="chapter" data-level="1.2.3" data-path="probability-theory.html"><a href="probability-theory.html#counting"><i class="fa fa-check"></i><b>1.2.3</b> Counting</a></li>
+<li class="chapter" data-level="1.2.4" data-path="probability-theory.html"><a href="probability-theory.html#enumerating-outcomes"><i class="fa fa-check"></i><b>1.2.4</b> Enumerating Outcomes</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="probability-theory.html"><a href="probability-theory.html#conditional-probability-and-independence"><i class="fa fa-check"></i><b>2.3</b> Conditional Probability and Independence</a></li>
-<li class="chapter" data-level="2.4" data-path="probability-theory.html"><a href="probability-theory.html#random-variables"><i class="fa fa-check"></i><b>2.4</b> Random Variables</a></li>
-<li class="chapter" data-level="2.5" data-path="probability-theory.html"><a href="probability-theory.html#distribution-functions"><i class="fa fa-check"></i><b>2.5</b> Distribution Functions</a></li>
-<li class="chapter" data-level="2.6" data-path="probability-theory.html"><a href="probability-theory.html#density-and-mass-functions"><i class="fa fa-check"></i><b>2.6</b> Density and Mass Functions</a></li>
-<li class="chapter" data-level="2.7" data-path="probability-theory.html"><a href="probability-theory.html#miscellanea"><i class="fa fa-check"></i><b>2.7</b> Miscellanea</a></li>
+<li class="chapter" data-level="1.3" data-path="probability-theory.html"><a href="probability-theory.html#conditional-probability-and-independence"><i class="fa fa-check"></i><b>1.3</b> Conditional Probability and Independence</a></li>
+<li class="chapter" data-level="1.4" data-path="probability-theory.html"><a href="probability-theory.html#random-variables"><i class="fa fa-check"></i><b>1.4</b> Random Variables</a></li>
+<li class="chapter" data-level="1.5" data-path="probability-theory.html"><a href="probability-theory.html#distribution-functions"><i class="fa fa-check"></i><b>1.5</b> Distribution Functions</a></li>
+<li class="chapter" data-level="1.6" data-path="probability-theory.html"><a href="probability-theory.html#density-and-mass-functions"><i class="fa fa-check"></i><b>1.6</b> Density and Mass Functions</a></li>
+<li class="chapter" data-level="1.7" data-path="probability-theory.html"><a href="probability-theory.html#miscellanea"><i class="fa fa-check"></i><b>1.7</b> Miscellanea</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="transformations-and-expectations.html"><a href="transformations-and-expectations.html"><i class="fa fa-check"></i><b>3</b> Transformations and Expectations</a><ul>
-<li class="chapter" data-level="3.1" data-path="transformations-and-expectations.html"><a href="transformations-and-expectations.html#distributions-of-functions-of-a-random-variable"><i class="fa fa-check"></i><b>3.1</b> Distributions of Functions of a Random Variable</a></li>
-<li class="chapter" data-level="3.2" data-path="transformations-and-expectations.html"><a href="transformations-and-expectations.html#expected-values"><i class="fa fa-check"></i><b>3.2</b> Expected Values</a></li>
-<li class="chapter" data-level="3.3" data-path="transformations-and-expectations.html"><a href="transformations-and-expectations.html#moments-and-moment-generating-functions"><i class="fa fa-check"></i><b>3.3</b> Moments and Moment Generating Functions</a></li>
-<li class="chapter" data-level="3.4" data-path="transformations-and-expectations.html"><a href="transformations-and-expectations.html#differentiating-under-an-integral-sign"><i class="fa fa-check"></i><b>3.4</b> Differentiating Under an Integral Sign</a></li>
-<li class="chapter" data-level="3.5" data-path="transformations-and-expectations.html"><a href="transformations-and-expectations.html#miscellanea-1"><i class="fa fa-check"></i><b>3.5</b> Miscellanea</a></li>
+<li class="chapter" data-level="2" data-path="transformations-and-expectations.html"><a href="transformations-and-expectations.html"><i class="fa fa-check"></i><b>2</b> Transformations and Expectations</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="transformations-and-expectations.html"><a href="transformations-and-expectations.html#distributions-of-functions-of-a-random-variable"><i class="fa fa-check"></i><b>2.1</b> Distributions of Functions of a Random Variable</a></li>
+<li class="chapter" data-level="2.2" data-path="transformations-and-expectations.html"><a href="transformations-and-expectations.html#expected-values"><i class="fa fa-check"></i><b>2.2</b> Expected Values</a></li>
+<li class="chapter" data-level="2.3" data-path="transformations-and-expectations.html"><a href="transformations-and-expectations.html#moments-and-moment-generating-functions"><i class="fa fa-check"></i><b>2.3</b> Moments and Moment Generating Functions</a></li>
+<li class="chapter" data-level="2.4" data-path="transformations-and-expectations.html"><a href="transformations-and-expectations.html#differentiating-under-an-integral-sign"><i class="fa fa-check"></i><b>2.4</b> Differentiating Under an Integral Sign</a></li>
+<li class="chapter" data-level="2.5" data-path="transformations-and-expectations.html"><a href="transformations-and-expectations.html#miscellanea-1"><i class="fa fa-check"></i><b>2.5</b> Miscellanea</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="common-families-of-distributions.html"><a href="common-families-of-distributions.html"><i class="fa fa-check"></i><b>4</b> Common Families of Distributions</a><ul>
-<li class="chapter" data-level="4.1" data-path="common-families-of-distributions.html"><a href="common-families-of-distributions.html#introduction"><i class="fa fa-check"></i><b>4.1</b> Introduction</a></li>
-<li class="chapter" data-level="4.2" data-path="common-families-of-distributions.html"><a href="common-families-of-distributions.html#discrete-distributions"><i class="fa fa-check"></i><b>4.2</b> Discrete Distributions</a></li>
-<li class="chapter" data-level="4.3" data-path="common-families-of-distributions.html"><a href="common-families-of-distributions.html#continuous-distributions"><i class="fa fa-check"></i><b>4.3</b> Continuous Distributions</a></li>
-<li class="chapter" data-level="4.4" data-path="common-families-of-distributions.html"><a href="common-families-of-distributions.html#exponential-families"><i class="fa fa-check"></i><b>4.4</b> Exponential Families</a></li>
-<li class="chapter" data-level="4.5" data-path="common-families-of-distributions.html"><a href="common-families-of-distributions.html#location-and-scale-families"><i class="fa fa-check"></i><b>4.5</b> Location and Scale Families</a></li>
-<li class="chapter" data-level="4.6" data-path="common-families-of-distributions.html"><a href="common-families-of-distributions.html#inequalities-and-identities"><i class="fa fa-check"></i><b>4.6</b> Inequalities and Identities</a><ul>
-<li class="chapter" data-level="4.6.1" data-path="common-families-of-distributions.html"><a href="common-families-of-distributions.html#probability-inequalities"><i class="fa fa-check"></i><b>4.6.1</b> Probability Inequalities</a></li>
-<li class="chapter" data-level="4.6.2" data-path="common-families-of-distributions.html"><a href="common-families-of-distributions.html#identities"><i class="fa fa-check"></i><b>4.6.2</b> Identities</a></li>
+<li class="chapter" data-level="3" data-path="common-families-of-distributions.html"><a href="common-families-of-distributions.html"><i class="fa fa-check"></i><b>3</b> Common Families of Distributions</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="common-families-of-distributions.html"><a href="common-families-of-distributions.html#introduction"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
+<li class="chapter" data-level="3.2" data-path="common-families-of-distributions.html"><a href="common-families-of-distributions.html#discrete-distributions"><i class="fa fa-check"></i><b>3.2</b> Discrete Distributions</a></li>
+<li class="chapter" data-level="3.3" data-path="common-families-of-distributions.html"><a href="common-families-of-distributions.html#continuous-distributions"><i class="fa fa-check"></i><b>3.3</b> Continuous Distributions</a></li>
+<li class="chapter" data-level="3.4" data-path="common-families-of-distributions.html"><a href="common-families-of-distributions.html#exponential-families"><i class="fa fa-check"></i><b>3.4</b> Exponential Families</a></li>
+<li class="chapter" data-level="3.5" data-path="common-families-of-distributions.html"><a href="common-families-of-distributions.html#location-and-scale-families"><i class="fa fa-check"></i><b>3.5</b> Location and Scale Families</a></li>
+<li class="chapter" data-level="3.6" data-path="common-families-of-distributions.html"><a href="common-families-of-distributions.html#inequalities-and-identities"><i class="fa fa-check"></i><b>3.6</b> Inequalities and Identities</a>
+<ul>
+<li class="chapter" data-level="3.6.1" data-path="common-families-of-distributions.html"><a href="common-families-of-distributions.html#probability-inequalities"><i class="fa fa-check"></i><b>3.6.1</b> Probability Inequalities</a></li>
+<li class="chapter" data-level="3.6.2" data-path="common-families-of-distributions.html"><a href="common-families-of-distributions.html#identities"><i class="fa fa-check"></i><b>3.6.2</b> Identities</a></li>
 </ul></li>
-<li class="chapter" data-level="4.7" data-path="common-families-of-distributions.html"><a href="common-families-of-distributions.html#miscellanea-2"><i class="fa fa-check"></i><b>4.7</b> Miscellanea</a></li>
+<li class="chapter" data-level="3.7" data-path="common-families-of-distributions.html"><a href="common-families-of-distributions.html#miscellanea-2"><i class="fa fa-check"></i><b>3.7</b> Miscellanea</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="multiple-random-variables.html"><a href="multiple-random-variables.html"><i class="fa fa-check"></i><b>5</b> Multiple Random Variables</a><ul>
-<li class="chapter" data-level="5.1" data-path="multiple-random-variables.html"><a href="multiple-random-variables.html#joint-and-marginal-distributions"><i class="fa fa-check"></i><b>5.1</b> Joint and Marginal Distributions</a></li>
-<li class="chapter" data-level="5.2" data-path="multiple-random-variables.html"><a href="multiple-random-variables.html#conditional-distributions-and-independence"><i class="fa fa-check"></i><b>5.2</b> Conditional Distributions and Independence</a></li>
-<li class="chapter" data-level="5.3" data-path="multiple-random-variables.html"><a href="multiple-random-variables.html#bivariate-transformations"><i class="fa fa-check"></i><b>5.3</b> Bivariate Transformations</a></li>
-<li class="chapter" data-level="5.4" data-path="multiple-random-variables.html"><a href="multiple-random-variables.html#hierarchical-models-and-mixtrue-distributions"><i class="fa fa-check"></i><b>5.4</b> Hierarchical Models and Mixtrue Distributions</a></li>
-<li class="chapter" data-level="5.5" data-path="multiple-random-variables.html"><a href="multiple-random-variables.html#covariance-and-correlation"><i class="fa fa-check"></i><b>5.5</b> Covariance and Correlation</a></li>
-<li class="chapter" data-level="5.6" data-path="multiple-random-variables.html"><a href="multiple-random-variables.html#multivariate-distributions"><i class="fa fa-check"></i><b>5.6</b> Multivariate Distributions</a></li>
-<li class="chapter" data-level="5.7" data-path="multiple-random-variables.html"><a href="multiple-random-variables.html#inequalities"><i class="fa fa-check"></i><b>5.7</b> Inequalities</a><ul>
-<li class="chapter" data-level="5.7.1" data-path="multiple-random-variables.html"><a href="multiple-random-variables.html#numerical-inequalities"><i class="fa fa-check"></i><b>5.7.1</b> Numerical Inequalities</a></li>
-<li class="chapter" data-level="5.7.2" data-path="multiple-random-variables.html"><a href="multiple-random-variables.html#functional-inequalities"><i class="fa fa-check"></i><b>5.7.2</b> Functional Inequalities</a></li>
+<li class="chapter" data-level="4" data-path="multiple-random-variables.html"><a href="multiple-random-variables.html"><i class="fa fa-check"></i><b>4</b> Multiple Random Variables</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="multiple-random-variables.html"><a href="multiple-random-variables.html#joint-and-marginal-distributions"><i class="fa fa-check"></i><b>4.1</b> Joint and Marginal Distributions</a></li>
+<li class="chapter" data-level="4.2" data-path="multiple-random-variables.html"><a href="multiple-random-variables.html#conditional-distributions-and-independence"><i class="fa fa-check"></i><b>4.2</b> Conditional Distributions and Independence</a></li>
+<li class="chapter" data-level="4.3" data-path="multiple-random-variables.html"><a href="multiple-random-variables.html#bivariate-transformations"><i class="fa fa-check"></i><b>4.3</b> Bivariate Transformations</a></li>
+<li class="chapter" data-level="4.4" data-path="multiple-random-variables.html"><a href="multiple-random-variables.html#hierarchical-models-and-mixtrue-distributions"><i class="fa fa-check"></i><b>4.4</b> Hierarchical Models and Mixtrue Distributions</a></li>
+<li class="chapter" data-level="4.5" data-path="multiple-random-variables.html"><a href="multiple-random-variables.html#covariance-and-correlation"><i class="fa fa-check"></i><b>4.5</b> Covariance and Correlation</a></li>
+<li class="chapter" data-level="4.6" data-path="multiple-random-variables.html"><a href="multiple-random-variables.html#multivariate-distributions"><i class="fa fa-check"></i><b>4.6</b> Multivariate Distributions</a></li>
+<li class="chapter" data-level="4.7" data-path="multiple-random-variables.html"><a href="multiple-random-variables.html#inequalities"><i class="fa fa-check"></i><b>4.7</b> Inequalities</a>
+<ul>
+<li class="chapter" data-level="4.7.1" data-path="multiple-random-variables.html"><a href="multiple-random-variables.html#numerical-inequalities"><i class="fa fa-check"></i><b>4.7.1</b> Numerical Inequalities</a></li>
+<li class="chapter" data-level="4.7.2" data-path="multiple-random-variables.html"><a href="multiple-random-variables.html#functional-inequalities"><i class="fa fa-check"></i><b>4.7.2</b> Functional Inequalities</a></li>
 </ul></li>
-<li class="chapter" data-level="5.8" data-path="multiple-random-variables.html"><a href="multiple-random-variables.html#miscellanea-3"><i class="fa fa-check"></i><b>5.8</b> Miscellanea</a></li>
+<li class="chapter" data-level="4.8" data-path="multiple-random-variables.html"><a href="multiple-random-variables.html#miscellanea-3"><i class="fa fa-check"></i><b>4.8</b> Miscellanea</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="properties-of-a-random-sample.html"><a href="properties-of-a-random-sample.html"><i class="fa fa-check"></i><b>6</b> Properties of a Random Sample</a><ul>
-<li class="chapter" data-level="6.1" data-path="properties-of-a-random-sample.html"><a href="properties-of-a-random-sample.html#basic-concepts-of-random-samples"><i class="fa fa-check"></i><b>6.1</b> Basic Concepts of Random Samples</a></li>
-<li class="chapter" data-level="6.2" data-path="properties-of-a-random-sample.html"><a href="properties-of-a-random-sample.html#sums-of-random-variables-from-a-random-sample"><i class="fa fa-check"></i><b>6.2</b> Sums of Random Variables from a Random Sample</a></li>
-<li class="chapter" data-level="6.3" data-path="properties-of-a-random-sample.html"><a href="properties-of-a-random-sample.html#sampling-from-the-normal-distribution"><i class="fa fa-check"></i><b>6.3</b> Sampling from the Normal Distribution</a><ul>
-<li class="chapter" data-level="6.3.1" data-path="properties-of-a-random-sample.html"><a href="properties-of-a-random-sample.html#properties-of-the-sample-mean-and-variance"><i class="fa fa-check"></i><b>6.3.1</b> Properties of the Sample Mean and Variance</a></li>
-<li class="chapter" data-level="6.3.2" data-path="properties-of-a-random-sample.html"><a href="properties-of-a-random-sample.html#the-derived-distributions-students-t-and-snedecors-f"><i class="fa fa-check"></i><b>6.3.2</b> The Derived Distributions: Student’s t and Snedecor’s F</a></li>
+<li class="chapter" data-level="5" data-path="properties-of-a-random-sample.html"><a href="properties-of-a-random-sample.html"><i class="fa fa-check"></i><b>5</b> Properties of a Random Sample</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="properties-of-a-random-sample.html"><a href="properties-of-a-random-sample.html#basic-concepts-of-random-samples"><i class="fa fa-check"></i><b>5.1</b> Basic Concepts of Random Samples</a></li>
+<li class="chapter" data-level="5.2" data-path="properties-of-a-random-sample.html"><a href="properties-of-a-random-sample.html#sums-of-random-variables-from-a-random-sample"><i class="fa fa-check"></i><b>5.2</b> Sums of Random Variables from a Random Sample</a></li>
+<li class="chapter" data-level="5.3" data-path="properties-of-a-random-sample.html"><a href="properties-of-a-random-sample.html#sampling-from-the-normal-distribution"><i class="fa fa-check"></i><b>5.3</b> Sampling from the Normal Distribution</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="properties-of-a-random-sample.html"><a href="properties-of-a-random-sample.html#properties-of-the-sample-mean-and-variance"><i class="fa fa-check"></i><b>5.3.1</b> Properties of the Sample Mean and Variance</a></li>
+<li class="chapter" data-level="5.3.2" data-path="properties-of-a-random-sample.html"><a href="properties-of-a-random-sample.html#the-derived-distributions-students-t-and-snedecors-f"><i class="fa fa-check"></i><b>5.3.2</b> The Derived Distributions: Student’s t and Snedecor’s F</a></li>
 </ul></li>
-<li class="chapter" data-level="6.4" data-path="properties-of-a-random-sample.html"><a href="properties-of-a-random-sample.html#order-statistics"><i class="fa fa-check"></i><b>6.4</b> Order Statistics</a></li>
-<li class="chapter" data-level="6.5" data-path="properties-of-a-random-sample.html"><a href="properties-of-a-random-sample.html#convergence-concepts"><i class="fa fa-check"></i><b>6.5</b> Convergence Concepts</a><ul>
-<li class="chapter" data-level="6.5.1" data-path="properties-of-a-random-sample.html"><a href="properties-of-a-random-sample.html#convergence-in-probability"><i class="fa fa-check"></i><b>6.5.1</b> Convergence in Probability</a></li>
-<li class="chapter" data-level="6.5.2" data-path="properties-of-a-random-sample.html"><a href="properties-of-a-random-sample.html#almost-sure-convergence"><i class="fa fa-check"></i><b>6.5.2</b> Almost Sure Convergence</a></li>
-<li class="chapter" data-level="6.5.3" data-path="properties-of-a-random-sample.html"><a href="properties-of-a-random-sample.html#convergence-in-distribution"><i class="fa fa-check"></i><b>6.5.3</b> Convergence in Distribution</a></li>
-<li class="chapter" data-level="6.5.4" data-path="properties-of-a-random-sample.html"><a href="properties-of-a-random-sample.html#the-delta-method"><i class="fa fa-check"></i><b>6.5.4</b> The Delta Method</a></li>
+<li class="chapter" data-level="5.4" data-path="properties-of-a-random-sample.html"><a href="properties-of-a-random-sample.html#order-statistics"><i class="fa fa-check"></i><b>5.4</b> Order Statistics</a></li>
+<li class="chapter" data-level="5.5" data-path="properties-of-a-random-sample.html"><a href="properties-of-a-random-sample.html#convergence-concepts"><i class="fa fa-check"></i><b>5.5</b> Convergence Concepts</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="properties-of-a-random-sample.html"><a href="properties-of-a-random-sample.html#convergence-in-probability"><i class="fa fa-check"></i><b>5.5.1</b> Convergence in Probability</a></li>
+<li class="chapter" data-level="5.5.2" data-path="properties-of-a-random-sample.html"><a href="properties-of-a-random-sample.html#almost-sure-convergence"><i class="fa fa-check"></i><b>5.5.2</b> Almost Sure Convergence</a></li>
+<li class="chapter" data-level="5.5.3" data-path="properties-of-a-random-sample.html"><a href="properties-of-a-random-sample.html#convergence-in-distribution"><i class="fa fa-check"></i><b>5.5.3</b> Convergence in Distribution</a></li>
+<li class="chapter" data-level="5.5.4" data-path="properties-of-a-random-sample.html"><a href="properties-of-a-random-sample.html#the-delta-method"><i class="fa fa-check"></i><b>5.5.4</b> The Delta Method</a></li>
 </ul></li>
-<li class="chapter" data-level="6.6" data-path="properties-of-a-random-sample.html"><a href="properties-of-a-random-sample.html#generating-a-random-sample"><i class="fa fa-check"></i><b>6.6</b> Generating a Random Sample</a><ul>
-<li class="chapter" data-level="6.6.1" data-path="properties-of-a-random-sample.html"><a href="properties-of-a-random-sample.html#direct-methods"><i class="fa fa-check"></i><b>6.6.1</b> Direct Methods</a></li>
-<li class="chapter" data-level="6.6.2" data-path="properties-of-a-random-sample.html"><a href="properties-of-a-random-sample.html#indirect-methods"><i class="fa fa-check"></i><b>6.6.2</b> Indirect Methods</a></li>
-<li class="chapter" data-level="6.6.3" data-path="properties-of-a-random-sample.html"><a href="properties-of-a-random-sample.html#the-acceptreject-algorithm"><i class="fa fa-check"></i><b>6.6.3</b> The Accept/Reject Algorithm</a></li>
+<li class="chapter" data-level="5.6" data-path="properties-of-a-random-sample.html"><a href="properties-of-a-random-sample.html#generating-a-random-sample"><i class="fa fa-check"></i><b>5.6</b> Generating a Random Sample</a>
+<ul>
+<li class="chapter" data-level="5.6.1" data-path="properties-of-a-random-sample.html"><a href="properties-of-a-random-sample.html#direct-methods"><i class="fa fa-check"></i><b>5.6.1</b> Direct Methods</a></li>
+<li class="chapter" data-level="5.6.2" data-path="properties-of-a-random-sample.html"><a href="properties-of-a-random-sample.html#indirect-methods"><i class="fa fa-check"></i><b>5.6.2</b> Indirect Methods</a></li>
+<li class="chapter" data-level="5.6.3" data-path="properties-of-a-random-sample.html"><a href="properties-of-a-random-sample.html#the-acceptreject-algorithm"><i class="fa fa-check"></i><b>5.6.3</b> The Accept/Reject Algorithm</a></li>
 </ul></li>
-<li class="chapter" data-level="6.7" data-path="properties-of-a-random-sample.html"><a href="properties-of-a-random-sample.html#miscellance"><i class="fa fa-check"></i><b>6.7</b> Miscellance</a></li>
+<li class="chapter" data-level="5.7" data-path="properties-of-a-random-sample.html"><a href="properties-of-a-random-sample.html#miscellance"><i class="fa fa-check"></i><b>5.7</b> Miscellance</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="principles-of-data-reduction.html"><a href="principles-of-data-reduction.html"><i class="fa fa-check"></i><b>7</b> Principles of Data Reduction</a><ul>
-<li class="chapter" data-level="7.1" data-path="principles-of-data-reduction.html"><a href="principles-of-data-reduction.html#introduction-1"><i class="fa fa-check"></i><b>7.1</b> Introduction</a></li>
-<li class="chapter" data-level="7.2" data-path="principles-of-data-reduction.html"><a href="principles-of-data-reduction.html#the-sufficiency-principle"><i class="fa fa-check"></i><b>7.2</b> The Sufficiency Principle</a><ul>
-<li class="chapter" data-level="7.2.1" data-path="principles-of-data-reduction.html"><a href="principles-of-data-reduction.html#sufficient-statistics"><i class="fa fa-check"></i><b>7.2.1</b> Sufficient Statistics</a></li>
-<li class="chapter" data-level="7.2.2" data-path="principles-of-data-reduction.html"><a href="principles-of-data-reduction.html#minimal-sufficient-statistics"><i class="fa fa-check"></i><b>7.2.2</b> Minimal Sufficient Statistics</a></li>
-<li class="chapter" data-level="7.2.3" data-path="principles-of-data-reduction.html"><a href="principles-of-data-reduction.html#ancillary-statistics"><i class="fa fa-check"></i><b>7.2.3</b> Ancillary Statistics</a></li>
-<li class="chapter" data-level="7.2.4" data-path="principles-of-data-reduction.html"><a href="principles-of-data-reduction.html#sufficient-ancillary-and-complete-statistics"><i class="fa fa-check"></i><b>7.2.4</b> Sufficient, Ancillary, and Complete Statistics</a></li>
+<li class="chapter" data-level="6" data-path="principles-of-data-reduction.html"><a href="principles-of-data-reduction.html"><i class="fa fa-check"></i><b>6</b> Principles of Data Reduction</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="principles-of-data-reduction.html"><a href="principles-of-data-reduction.html#introduction-1"><i class="fa fa-check"></i><b>6.1</b> Introduction</a></li>
+<li class="chapter" data-level="6.2" data-path="principles-of-data-reduction.html"><a href="principles-of-data-reduction.html#the-sufficiency-principle"><i class="fa fa-check"></i><b>6.2</b> The Sufficiency Principle</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="principles-of-data-reduction.html"><a href="principles-of-data-reduction.html#sufficient-statistics"><i class="fa fa-check"></i><b>6.2.1</b> Sufficient Statistics</a></li>
+<li class="chapter" data-level="6.2.2" data-path="principles-of-data-reduction.html"><a href="principles-of-data-reduction.html#minimal-sufficient-statistics"><i class="fa fa-check"></i><b>6.2.2</b> Minimal Sufficient Statistics</a></li>
+<li class="chapter" data-level="6.2.3" data-path="principles-of-data-reduction.html"><a href="principles-of-data-reduction.html#ancillary-statistics"><i class="fa fa-check"></i><b>6.2.3</b> Ancillary Statistics</a></li>
+<li class="chapter" data-level="6.2.4" data-path="principles-of-data-reduction.html"><a href="principles-of-data-reduction.html#sufficient-ancillary-and-complete-statistics"><i class="fa fa-check"></i><b>6.2.4</b> Sufficient, Ancillary, and Complete Statistics</a></li>
 </ul></li>
-<li class="chapter" data-level="7.3" data-path="principles-of-data-reduction.html"><a href="principles-of-data-reduction.html#the-likelihood-principle"><i class="fa fa-check"></i><b>7.3</b> The Likelihood Principle</a><ul>
-<li class="chapter" data-level="7.3.1" data-path="principles-of-data-reduction.html"><a href="principles-of-data-reduction.html#the-likelihood-function"><i class="fa fa-check"></i><b>7.3.1</b> The Likelihood Function</a></li>
-<li class="chapter" data-level="7.3.2" data-path="principles-of-data-reduction.html"><a href="principles-of-data-reduction.html#the-formal-likelihood-principe"><i class="fa fa-check"></i><b>7.3.2</b> The Formal Likelihood Principe</a></li>
+<li class="chapter" data-level="6.3" data-path="principles-of-data-reduction.html"><a href="principles-of-data-reduction.html#the-likelihood-principle"><i class="fa fa-check"></i><b>6.3</b> The Likelihood Principle</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="principles-of-data-reduction.html"><a href="principles-of-data-reduction.html#the-likelihood-function"><i class="fa fa-check"></i><b>6.3.1</b> The Likelihood Function</a></li>
+<li class="chapter" data-level="6.3.2" data-path="principles-of-data-reduction.html"><a href="principles-of-data-reduction.html#the-formal-likelihood-principe"><i class="fa fa-check"></i><b>6.3.2</b> The Formal Likelihood Principe</a></li>
 </ul></li>
-<li class="chapter" data-level="7.4" data-path="principles-of-data-reduction.html"><a href="principles-of-data-reduction.html#the-equivariance-principle"><i class="fa fa-check"></i><b>7.4</b> The Equivariance Principle</a></li>
-<li class="chapter" data-level="7.5" data-path="principles-of-data-reduction.html"><a href="principles-of-data-reduction.html#miscelllanea"><i class="fa fa-check"></i><b>7.5</b> Miscelllanea</a></li>
+<li class="chapter" data-level="6.4" data-path="principles-of-data-reduction.html"><a href="principles-of-data-reduction.html#the-equivariance-principle"><i class="fa fa-check"></i><b>6.4</b> The Equivariance Principle</a></li>
+<li class="chapter" data-level="6.5" data-path="principles-of-data-reduction.html"><a href="principles-of-data-reduction.html#miscelllanea"><i class="fa fa-check"></i><b>6.5</b> Miscelllanea</a></li>
 </ul></li>
-<li class="chapter" data-level="8" data-path="point-estimation.html"><a href="point-estimation.html"><i class="fa fa-check"></i><b>8</b> Point Estimation</a><ul>
-<li class="chapter" data-level="8.1" data-path="point-estimation.html"><a href="point-estimation.html#introduction-2"><i class="fa fa-check"></i><b>8.1</b> Introduction</a></li>
-<li class="chapter" data-level="8.2" data-path="point-estimation.html"><a href="point-estimation.html#methods-of-finding-estimators"><i class="fa fa-check"></i><b>8.2</b> Methods of Finding Estimators</a><ul>
-<li class="chapter" data-level="8.2.1" data-path="point-estimation.html"><a href="point-estimation.html#method-of-moments"><i class="fa fa-check"></i><b>8.2.1</b> Method of Moments</a></li>
-<li class="chapter" data-level="8.2.2" data-path="point-estimation.html"><a href="point-estimation.html#maximum-likelihood-estimators"><i class="fa fa-check"></i><b>8.2.2</b> Maximum Likelihood Estimators</a></li>
-<li class="chapter" data-level="8.2.3" data-path="point-estimation.html"><a href="point-estimation.html#bayes-estimators"><i class="fa fa-check"></i><b>8.2.3</b> Bayes Estimators</a></li>
-<li class="chapter" data-level="8.2.4" data-path="point-estimation.html"><a href="point-estimation.html#the-em-algorithm"><i class="fa fa-check"></i><b>8.2.4</b> The EM Algorithm</a></li>
+<li class="chapter" data-level="7" data-path="point-estimation.html"><a href="point-estimation.html"><i class="fa fa-check"></i><b>7</b> Point Estimation</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="point-estimation.html"><a href="point-estimation.html#introduction-2"><i class="fa fa-check"></i><b>7.1</b> Introduction</a></li>
+<li class="chapter" data-level="7.2" data-path="point-estimation.html"><a href="point-estimation.html#methods-of-finding-estimators"><i class="fa fa-check"></i><b>7.2</b> Methods of Finding Estimators</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="point-estimation.html"><a href="point-estimation.html#method-of-moments"><i class="fa fa-check"></i><b>7.2.1</b> Method of Moments</a></li>
+<li class="chapter" data-level="7.2.2" data-path="point-estimation.html"><a href="point-estimation.html#maximum-likelihood-estimators"><i class="fa fa-check"></i><b>7.2.2</b> Maximum Likelihood Estimators</a></li>
+<li class="chapter" data-level="7.2.3" data-path="point-estimation.html"><a href="point-estimation.html#bayes-estimators"><i class="fa fa-check"></i><b>7.2.3</b> Bayes Estimators</a></li>
+<li class="chapter" data-level="7.2.4" data-path="point-estimation.html"><a href="point-estimation.html#the-em-algorithm"><i class="fa fa-check"></i><b>7.2.4</b> The EM Algorithm</a></li>
 </ul></li>
-<li class="chapter" data-level="8.3" data-path="point-estimation.html"><a href="point-estimation.html#methods-of-evaluating-estimators"><i class="fa fa-check"></i><b>8.3</b> Methods of Evaluating Estimators</a><ul>
-<li class="chapter" data-level="8.3.1" data-path="point-estimation.html"><a href="point-estimation.html#mean-squared-error"><i class="fa fa-check"></i><b>8.3.1</b> Mean Squared Error</a></li>
-<li class="chapter" data-level="8.3.2" data-path="point-estimation.html"><a href="point-estimation.html#best-unbiased-estimators"><i class="fa fa-check"></i><b>8.3.2</b> Best Unbiased Estimators</a></li>
-<li class="chapter" data-level="8.3.3" data-path="point-estimation.html"><a href="point-estimation.html#sufficiency-and-unbiasedness"><i class="fa fa-check"></i><b>8.3.3</b> Sufficiency and Unbiasedness</a></li>
-<li class="chapter" data-level="8.3.4" data-path="point-estimation.html"><a href="point-estimation.html#loss-function-optimality"><i class="fa fa-check"></i><b>8.3.4</b> Loss Function Optimality</a></li>
+<li class="chapter" data-level="7.3" data-path="point-estimation.html"><a href="point-estimation.html#methods-of-evaluating-estimators"><i class="fa fa-check"></i><b>7.3</b> Methods of Evaluating Estimators</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="point-estimation.html"><a href="point-estimation.html#mean-squared-error"><i class="fa fa-check"></i><b>7.3.1</b> Mean Squared Error</a></li>
+<li class="chapter" data-level="7.3.2" data-path="point-estimation.html"><a href="point-estimation.html#best-unbiased-estimators"><i class="fa fa-check"></i><b>7.3.2</b> Best Unbiased Estimators</a></li>
+<li class="chapter" data-level="7.3.3" data-path="point-estimation.html"><a href="point-estimation.html#sufficiency-and-unbiasedness"><i class="fa fa-check"></i><b>7.3.3</b> Sufficiency and Unbiasedness</a></li>
+<li class="chapter" data-level="7.3.4" data-path="point-estimation.html"><a href="point-estimation.html#loss-function-optimality"><i class="fa fa-check"></i><b>7.3.4</b> Loss Function Optimality</a></li>
 </ul></li>
-<li class="chapter" data-level="8.4" data-path="point-estimation.html"><a href="point-estimation.html#miscellanea-4"><i class="fa fa-check"></i><b>8.4</b> Miscellanea</a></li>
+<li class="chapter" data-level="7.4" data-path="point-estimation.html"><a href="point-estimation.html#miscellanea-4"><i class="fa fa-check"></i><b>7.4</b> Miscellanea</a></li>
 </ul></li>
-<li class="chapter" data-level="9" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html"><i class="fa fa-check"></i><b>9</b> Hypothesis Testing</a><ul>
-<li class="chapter" data-level="9.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#introduction-3"><i class="fa fa-check"></i><b>9.1</b> Introduction</a></li>
-<li class="chapter" data-level="9.2" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#methods-of-finding-tests"><i class="fa fa-check"></i><b>9.2</b> Methods of Finding Tests</a><ul>
-<li class="chapter" data-level="9.2.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#likelihood-ratio-tests"><i class="fa fa-check"></i><b>9.2.1</b> Likelihood Ratio Tests</a></li>
-<li class="chapter" data-level="9.2.2" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#bayesian-tests"><i class="fa fa-check"></i><b>9.2.2</b> Bayesian Tests</a></li>
-<li class="chapter" data-level="9.2.3" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#union-intersection-and-intersection-union-tests"><i class="fa fa-check"></i><b>9.2.3</b> Union-Intersection and Intersection-Union Tests</a></li>
+<li class="chapter" data-level="8" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html"><i class="fa fa-check"></i><b>8</b> Hypothesis Testing</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#introduction-3"><i class="fa fa-check"></i><b>8.1</b> Introduction</a></li>
+<li class="chapter" data-level="8.2" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#methods-of-finding-tests"><i class="fa fa-check"></i><b>8.2</b> Methods of Finding Tests</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#likelihood-ratio-tests"><i class="fa fa-check"></i><b>8.2.1</b> Likelihood Ratio Tests</a></li>
+<li class="chapter" data-level="8.2.2" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#bayesian-tests"><i class="fa fa-check"></i><b>8.2.2</b> Bayesian Tests</a></li>
+<li class="chapter" data-level="8.2.3" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#union-intersection-and-intersection-union-tests"><i class="fa fa-check"></i><b>8.2.3</b> Union-Intersection and Intersection-Union Tests</a></li>
 </ul></li>
-<li class="chapter" data-level="9.3" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#methods-of-evaluating-tests"><i class="fa fa-check"></i><b>9.3</b> Methods of Evaluating Tests</a><ul>
-<li class="chapter" data-level="9.3.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#error-probabilities-and-the-power-function"><i class="fa fa-check"></i><b>9.3.1</b> Error Probabilities and the Power Function</a></li>
-<li class="chapter" data-level="9.3.2" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#most-powerful-tests"><i class="fa fa-check"></i><b>9.3.2</b> Most Powerful Tests</a></li>
-<li class="chapter" data-level="9.3.3" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#sizes-of-union-intersection-and-intersection-union-tests"><i class="fa fa-check"></i><b>9.3.3</b> Sizes of Union-Intersection and Intersection-Union Tests</a></li>
-<li class="chapter" data-level="9.3.4" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#p-values"><i class="fa fa-check"></i><b>9.3.4</b> p-Values</a></li>
-<li class="chapter" data-level="9.3.5" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#loss-function-optimality-1"><i class="fa fa-check"></i><b>9.3.5</b> Loss Function Optimality</a></li>
+<li class="chapter" data-level="8.3" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#methods-of-evaluating-tests"><i class="fa fa-check"></i><b>8.3</b> Methods of Evaluating Tests</a>
+<ul>
+<li class="chapter" data-level="8.3.1" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#error-probabilities-and-the-power-function"><i class="fa fa-check"></i><b>8.3.1</b> Error Probabilities and the Power Function</a></li>
+<li class="chapter" data-level="8.3.2" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#most-powerful-tests"><i class="fa fa-check"></i><b>8.3.2</b> Most Powerful Tests</a></li>
+<li class="chapter" data-level="8.3.3" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#sizes-of-union-intersection-and-intersection-union-tests"><i class="fa fa-check"></i><b>8.3.3</b> Sizes of Union-Intersection and Intersection-Union Tests</a></li>
+<li class="chapter" data-level="8.3.4" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#p-values"><i class="fa fa-check"></i><b>8.3.4</b> p-Values</a></li>
+<li class="chapter" data-level="8.3.5" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#loss-function-optimality-1"><i class="fa fa-check"></i><b>8.3.5</b> Loss Function Optimality</a></li>
 </ul></li>
-<li class="chapter" data-level="9.4" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#miscellanea-5"><i class="fa fa-check"></i><b>9.4</b> Miscellanea</a></li>
+<li class="chapter" data-level="8.4" data-path="hypothesis-testing.html"><a href="hypothesis-testing.html#miscellanea-5"><i class="fa fa-check"></i><b>8.4</b> Miscellanea</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="interval-estimation.html"><a href="interval-estimation.html"><i class="fa fa-check"></i><b>10</b> Interval Estimation</a><ul>
-<li class="chapter" data-level="10.1" data-path="interval-estimation.html"><a href="interval-estimation.html#introduction-4"><i class="fa fa-check"></i><b>10.1</b> Introduction</a></li>
-<li class="chapter" data-level="10.2" data-path="interval-estimation.html"><a href="interval-estimation.html#methods-of-finding-interval-estimators"><i class="fa fa-check"></i><b>10.2</b> Methods of Finding Interval Estimators</a><ul>
-<li class="chapter" data-level="10.2.1" data-path="interval-estimation.html"><a href="interval-estimation.html#inverting-a-test-statistic"><i class="fa fa-check"></i><b>10.2.1</b> Inverting a Test Statistic</a></li>
-<li class="chapter" data-level="10.2.2" data-path="interval-estimation.html"><a href="interval-estimation.html#pivotal-quantities"><i class="fa fa-check"></i><b>10.2.2</b> Pivotal Quantities</a></li>
-<li class="chapter" data-level="10.2.3" data-path="interval-estimation.html"><a href="interval-estimation.html#pivoting-the-cdf"><i class="fa fa-check"></i><b>10.2.3</b> Pivoting the CDF</a></li>
-<li class="chapter" data-level="10.2.4" data-path="interval-estimation.html"><a href="interval-estimation.html#bayesian-intervals"><i class="fa fa-check"></i><b>10.2.4</b> Bayesian Intervals</a></li>
+<li class="chapter" data-level="9" data-path="interval-estimation.html"><a href="interval-estimation.html"><i class="fa fa-check"></i><b>9</b> Interval Estimation</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="interval-estimation.html"><a href="interval-estimation.html#introduction-4"><i class="fa fa-check"></i><b>9.1</b> Introduction</a></li>
+<li class="chapter" data-level="9.2" data-path="interval-estimation.html"><a href="interval-estimation.html#methods-of-finding-interval-estimators"><i class="fa fa-check"></i><b>9.2</b> Methods of Finding Interval Estimators</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="interval-estimation.html"><a href="interval-estimation.html#inverting-a-test-statistic"><i class="fa fa-check"></i><b>9.2.1</b> Inverting a Test Statistic</a></li>
+<li class="chapter" data-level="9.2.2" data-path="interval-estimation.html"><a href="interval-estimation.html#pivotal-quantities"><i class="fa fa-check"></i><b>9.2.2</b> Pivotal Quantities</a></li>
+<li class="chapter" data-level="9.2.3" data-path="interval-estimation.html"><a href="interval-estimation.html#pivoting-the-cdf"><i class="fa fa-check"></i><b>9.2.3</b> Pivoting the CDF</a></li>
+<li class="chapter" data-level="9.2.4" data-path="interval-estimation.html"><a href="interval-estimation.html#bayesian-intervals"><i class="fa fa-check"></i><b>9.2.4</b> Bayesian Intervals</a></li>
 </ul></li>
-<li class="chapter" data-level="10.3" data-path="interval-estimation.html"><a href="interval-estimation.html#methods-of-evaluating-interval-estimators"><i class="fa fa-check"></i><b>10.3</b> Methods of Evaluating Interval Estimators</a><ul>
-<li class="chapter" data-level="10.3.1" data-path="interval-estimation.html"><a href="interval-estimation.html#size-and-coverage-probability"><i class="fa fa-check"></i><b>10.3.1</b> Size and Coverage Probability</a></li>
-<li class="chapter" data-level="10.3.2" data-path="interval-estimation.html"><a href="interval-estimation.html#test-related-optimality"><i class="fa fa-check"></i><b>10.3.2</b> Test-Related Optimality</a></li>
-<li class="chapter" data-level="10.3.3" data-path="interval-estimation.html"><a href="interval-estimation.html#bayesian-optimality"><i class="fa fa-check"></i><b>10.3.3</b> Bayesian Optimality</a></li>
-<li class="chapter" data-level="10.3.4" data-path="interval-estimation.html"><a href="interval-estimation.html#loss-function-optimality-2"><i class="fa fa-check"></i><b>10.3.4</b> Loss Function Optimality</a></li>
+<li class="chapter" data-level="9.3" data-path="interval-estimation.html"><a href="interval-estimation.html#methods-of-evaluating-interval-estimators"><i class="fa fa-check"></i><b>9.3</b> Methods of Evaluating Interval Estimators</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="interval-estimation.html"><a href="interval-estimation.html#size-and-coverage-probability"><i class="fa fa-check"></i><b>9.3.1</b> Size and Coverage Probability</a></li>
+<li class="chapter" data-level="9.3.2" data-path="interval-estimation.html"><a href="interval-estimation.html#test-related-optimality"><i class="fa fa-check"></i><b>9.3.2</b> Test-Related Optimality</a></li>
+<li class="chapter" data-level="9.3.3" data-path="interval-estimation.html"><a href="interval-estimation.html#bayesian-optimality"><i class="fa fa-check"></i><b>9.3.3</b> Bayesian Optimality</a></li>
+<li class="chapter" data-level="9.3.4" data-path="interval-estimation.html"><a href="interval-estimation.html#loss-function-optimality-2"><i class="fa fa-check"></i><b>9.3.4</b> Loss Function Optimality</a></li>
 </ul></li>
-<li class="chapter" data-level="10.4" data-path="interval-estimation.html"><a href="interval-estimation.html#miscllanea"><i class="fa fa-check"></i><b>10.4</b> Miscllanea</a></li>
+<li class="chapter" data-level="9.4" data-path="interval-estimation.html"><a href="interval-estimation.html#miscllanea"><i class="fa fa-check"></i><b>9.4</b> Miscllanea</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="asymptotic-evaluations.html"><a href="asymptotic-evaluations.html"><i class="fa fa-check"></i><b>11</b> Asymptotic Evaluations</a><ul>
-<li class="chapter" data-level="11.1" data-path="asymptotic-evaluations.html"><a href="asymptotic-evaluations.html#point-estimation-1"><i class="fa fa-check"></i><b>11.1</b> Point Estimation</a><ul>
-<li class="chapter" data-level="11.1.1" data-path="asymptotic-evaluations.html"><a href="asymptotic-evaluations.html#consistency"><i class="fa fa-check"></i><b>11.1.1</b> Consistency</a></li>
-<li class="chapter" data-level="11.1.2" data-path="asymptotic-evaluations.html"><a href="asymptotic-evaluations.html#efficiency"><i class="fa fa-check"></i><b>11.1.2</b> Efficiency</a></li>
-<li class="chapter" data-level="11.1.3" data-path="asymptotic-evaluations.html"><a href="asymptotic-evaluations.html#calculations-and-comparisons"><i class="fa fa-check"></i><b>11.1.3</b> Calculations and Comparisons</a></li>
-<li class="chapter" data-level="11.1.4" data-path="asymptotic-evaluations.html"><a href="asymptotic-evaluations.html#bootstrap-standard-errors"><i class="fa fa-check"></i><b>11.1.4</b> Bootstrap Standard Errors</a></li>
+<li class="chapter" data-level="10" data-path="asymptotic-evaluations.html"><a href="asymptotic-evaluations.html"><i class="fa fa-check"></i><b>10</b> Asymptotic Evaluations</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="asymptotic-evaluations.html"><a href="asymptotic-evaluations.html#point-estimation-1"><i class="fa fa-check"></i><b>10.1</b> Point Estimation</a>
+<ul>
+<li class="chapter" data-level="10.1.1" data-path="asymptotic-evaluations.html"><a href="asymptotic-evaluations.html#consistency"><i class="fa fa-check"></i><b>10.1.1</b> Consistency</a></li>
+<li class="chapter" data-level="10.1.2" data-path="asymptotic-evaluations.html"><a href="asymptotic-evaluations.html#efficiency"><i class="fa fa-check"></i><b>10.1.2</b> Efficiency</a></li>
+<li class="chapter" data-level="10.1.3" data-path="asymptotic-evaluations.html"><a href="asymptotic-evaluations.html#calculations-and-comparisons"><i class="fa fa-check"></i><b>10.1.3</b> Calculations and Comparisons</a></li>
+<li class="chapter" data-level="10.1.4" data-path="asymptotic-evaluations.html"><a href="asymptotic-evaluations.html#bootstrap-standard-errors"><i class="fa fa-check"></i><b>10.1.4</b> Bootstrap Standard Errors</a></li>
 </ul></li>
-<li class="chapter" data-level="11.2" data-path="asymptotic-evaluations.html"><a href="asymptotic-evaluations.html#robustness"><i class="fa fa-check"></i><b>11.2</b> Robustness</a><ul>
-<li class="chapter" data-level="11.2.1" data-path="asymptotic-evaluations.html"><a href="asymptotic-evaluations.html#the-mean-and-the-median"><i class="fa fa-check"></i><b>11.2.1</b> The Mean and the Median</a></li>
-<li class="chapter" data-level="11.2.2" data-path="asymptotic-evaluations.html"><a href="asymptotic-evaluations.html#m-estimators"><i class="fa fa-check"></i><b>11.2.2</b> M-Estimators</a></li>
+<li class="chapter" data-level="10.2" data-path="asymptotic-evaluations.html"><a href="asymptotic-evaluations.html#robustness"><i class="fa fa-check"></i><b>10.2</b> Robustness</a>
+<ul>
+<li class="chapter" data-level="10.2.1" data-path="asymptotic-evaluations.html"><a href="asymptotic-evaluations.html#the-mean-and-the-median"><i class="fa fa-check"></i><b>10.2.1</b> The Mean and the Median</a></li>
+<li class="chapter" data-level="10.2.2" data-path="asymptotic-evaluations.html"><a href="asymptotic-evaluations.html#m-estimators"><i class="fa fa-check"></i><b>10.2.2</b> M-Estimators</a></li>
 </ul></li>
-<li class="chapter" data-level="11.3" data-path="asymptotic-evaluations.html"><a href="asymptotic-evaluations.html#hypothesis-testing-1"><i class="fa fa-check"></i><b>11.3</b> Hypothesis Testing</a><ul>
-<li class="chapter" data-level="11.3.1" data-path="asymptotic-evaluations.html"><a href="asymptotic-evaluations.html#asymptotic-distribution-of-lrts"><i class="fa fa-check"></i><b>11.3.1</b> Asymptotic Distribution of LRTs</a></li>
-<li class="chapter" data-level="11.3.2" data-path="asymptotic-evaluations.html"><a href="asymptotic-evaluations.html#other-large-sample-tests"><i class="fa fa-check"></i><b>11.3.2</b> Other Large-Sample Tests</a></li>
+<li class="chapter" data-level="10.3" data-path="asymptotic-evaluations.html"><a href="asymptotic-evaluations.html#hypothesis-testing-1"><i class="fa fa-check"></i><b>10.3</b> Hypothesis Testing</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="asymptotic-evaluations.html"><a href="asymptotic-evaluations.html#asymptotic-distribution-of-lrts"><i class="fa fa-check"></i><b>10.3.1</b> Asymptotic Distribution of LRTs</a></li>
+<li class="chapter" data-level="10.3.2" data-path="asymptotic-evaluations.html"><a href="asymptotic-evaluations.html#other-large-sample-tests"><i class="fa fa-check"></i><b>10.3.2</b> Other Large-Sample Tests</a></li>
 </ul></li>
-<li class="chapter" data-level="11.4" data-path="asymptotic-evaluations.html"><a href="asymptotic-evaluations.html#interval-estimation-1"><i class="fa fa-check"></i><b>11.4</b> Interval Estimation</a><ul>
-<li class="chapter" data-level="11.4.1" data-path="asymptotic-evaluations.html"><a href="asymptotic-evaluations.html#approximate-maximum-likelihood-intervals"><i class="fa fa-check"></i><b>11.4.1</b> Approximate Maximum Likelihood Intervals</a></li>
-<li class="chapter" data-level="11.4.2" data-path="asymptotic-evaluations.html"><a href="asymptotic-evaluations.html#other-large-sample-intervals"><i class="fa fa-check"></i><b>11.4.2</b> Other Large-Sample Intervals</a></li>
+<li class="chapter" data-level="10.4" data-path="asymptotic-evaluations.html"><a href="asymptotic-evaluations.html#interval-estimation-1"><i class="fa fa-check"></i><b>10.4</b> Interval Estimation</a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="asymptotic-evaluations.html"><a href="asymptotic-evaluations.html#approximate-maximum-likelihood-intervals"><i class="fa fa-check"></i><b>10.4.1</b> Approximate Maximum Likelihood Intervals</a></li>
+<li class="chapter" data-level="10.4.2" data-path="asymptotic-evaluations.html"><a href="asymptotic-evaluations.html#other-large-sample-intervals"><i class="fa fa-check"></i><b>10.4.2</b> Other Large-Sample Intervals</a></li>
 </ul></li>
-<li class="chapter" data-level="11.5" data-path="asymptotic-evaluations.html"><a href="asymptotic-evaluations.html#miscellanea-6"><i class="fa fa-check"></i><b>11.5</b> Miscellanea</a></li>
+<li class="chapter" data-level="10.5" data-path="asymptotic-evaluations.html"><a href="asymptotic-evaluations.html#miscellanea-6"><i class="fa fa-check"></i><b>10.5</b> Miscellanea</a></li>
 </ul></li>
-<li class="chapter" data-level="12" data-path="analysis-of-variance-and-regression.html"><a href="analysis-of-variance-and-regression.html"><i class="fa fa-check"></i><b>12</b> Analysis of Variance and Regression</a><ul>
-<li class="chapter" data-level="12.1" data-path="analysis-of-variance-and-regression.html"><a href="analysis-of-variance-and-regression.html#introduction-5"><i class="fa fa-check"></i><b>12.1</b> Introduction</a></li>
-<li class="chapter" data-level="12.2" data-path="analysis-of-variance-and-regression.html"><a href="analysis-of-variance-and-regression.html#oneway-analysis-of-variance"><i class="fa fa-check"></i><b>12.2</b> Oneway Analysis of Variance</a><ul>
-<li class="chapter" data-level="12.2.1" data-path="analysis-of-variance-and-regression.html"><a href="analysis-of-variance-and-regression.html#model-and-distribution-assumptions"><i class="fa fa-check"></i><b>12.2.1</b> Model and Distribution Assumptions</a></li>
-<li class="chapter" data-level="12.2.2" data-path="analysis-of-variance-and-regression.html"><a href="analysis-of-variance-and-regression.html#the-classical-anova-hypothesis"><i class="fa fa-check"></i><b>12.2.2</b> The Classical ANOVA Hypothesis</a></li>
-<li class="chapter" data-level="12.2.3" data-path="analysis-of-variance-and-regression.html"><a href="analysis-of-variance-and-regression.html#inferences-regarding-linear-combinations-of-means"><i class="fa fa-check"></i><b>12.2.3</b> Inferences Regarding Linear Combinations of Means</a></li>
-<li class="chapter" data-level="12.2.4" data-path="analysis-of-variance-and-regression.html"><a href="analysis-of-variance-and-regression.html#the-anova-f-test"><i class="fa fa-check"></i><b>12.2.4</b> The ANOVA F Test</a></li>
-<li class="chapter" data-level="12.2.5" data-path="analysis-of-variance-and-regression.html"><a href="analysis-of-variance-and-regression.html#simultaneous-estimation-of-contrasts"><i class="fa fa-check"></i><b>12.2.5</b> Simultaneous Estimation of Contrasts</a></li>
-<li class="chapter" data-level="12.2.6" data-path="analysis-of-variance-and-regression.html"><a href="analysis-of-variance-and-regression.html#partitioning-sums-of-squares"><i class="fa fa-check"></i><b>12.2.6</b> Partitioning Sums of Squares</a></li>
+<li class="chapter" data-level="11" data-path="analysis-of-variance-and-regression.html"><a href="analysis-of-variance-and-regression.html"><i class="fa fa-check"></i><b>11</b> Analysis of Variance and Regression</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="analysis-of-variance-and-regression.html"><a href="analysis-of-variance-and-regression.html#introduction-5"><i class="fa fa-check"></i><b>11.1</b> Introduction</a></li>
+<li class="chapter" data-level="11.2" data-path="analysis-of-variance-and-regression.html"><a href="analysis-of-variance-and-regression.html#oneway-analysis-of-variance"><i class="fa fa-check"></i><b>11.2</b> Oneway Analysis of Variance</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="analysis-of-variance-and-regression.html"><a href="analysis-of-variance-and-regression.html#model-and-distribution-assumptions"><i class="fa fa-check"></i><b>11.2.1</b> Model and Distribution Assumptions</a></li>
+<li class="chapter" data-level="11.2.2" data-path="analysis-of-variance-and-regression.html"><a href="analysis-of-variance-and-regression.html#the-classical-anova-hypothesis"><i class="fa fa-check"></i><b>11.2.2</b> The Classical ANOVA Hypothesis</a></li>
+<li class="chapter" data-level="11.2.3" data-path="analysis-of-variance-and-regression.html"><a href="analysis-of-variance-and-regression.html#inferences-regarding-linear-combinations-of-means"><i class="fa fa-check"></i><b>11.2.3</b> Inferences Regarding Linear Combinations of Means</a></li>
+<li class="chapter" data-level="11.2.4" data-path="analysis-of-variance-and-regression.html"><a href="analysis-of-variance-and-regression.html#the-anova-f-test"><i class="fa fa-check"></i><b>11.2.4</b> The ANOVA F Test</a></li>
+<li class="chapter" data-level="11.2.5" data-path="analysis-of-variance-and-regression.html"><a href="analysis-of-variance-and-regression.html#simultaneous-estimation-of-contrasts"><i class="fa fa-check"></i><b>11.2.5</b> Simultaneous Estimation of Contrasts</a></li>
+<li class="chapter" data-level="11.2.6" data-path="analysis-of-variance-and-regression.html"><a href="analysis-of-variance-and-regression.html#partitioning-sums-of-squares"><i class="fa fa-check"></i><b>11.2.6</b> Partitioning Sums of Squares</a></li>
 </ul></li>
-<li class="chapter" data-level="12.3" data-path="analysis-of-variance-and-regression.html"><a href="analysis-of-variance-and-regression.html#simple-linear-regression"><i class="fa fa-check"></i><b>12.3</b> Simple Linear Regression</a><ul>
-<li class="chapter" data-level="12.3.1" data-path="analysis-of-variance-and-regression.html"><a href="analysis-of-variance-and-regression.html#least-squares-a-mathematical-solution"><i class="fa fa-check"></i><b>12.3.1</b> Least Squares: A Mathematical Solution</a></li>
-<li class="chapter" data-level="12.3.2" data-path="analysis-of-variance-and-regression.html"><a href="analysis-of-variance-and-regression.html#best-linear-unbiased-estimators-a-statistical-solution"><i class="fa fa-check"></i><b>12.3.2</b> Best Linear Unbiased Estimators: A Statistical Solution</a></li>
-<li class="chapter" data-level="12.3.3" data-path="analysis-of-variance-and-regression.html"><a href="analysis-of-variance-and-regression.html#models-and-distribution-assumptions"><i class="fa fa-check"></i><b>12.3.3</b> Models and Distribution Assumptions</a></li>
-<li class="chapter" data-level="12.3.4" data-path="analysis-of-variance-and-regression.html"><a href="analysis-of-variance-and-regression.html#estimation-and-testing-with-normal-erros"><i class="fa fa-check"></i><b>12.3.4</b> Estimation and Testing with Normal Erros</a></li>
-<li class="chapter" data-level="12.3.5" data-path="analysis-of-variance-and-regression.html"><a href="analysis-of-variance-and-regression.html#estimation-and-prediction-at-a-specified-x-x0"><i class="fa fa-check"></i><b>12.3.5</b> Estimation and Prediction at a Specified x = x0</a></li>
-<li class="chapter" data-level="12.3.6" data-path="analysis-of-variance-and-regression.html"><a href="analysis-of-variance-and-regression.html#simultaneous-estimation-and-confidence-bands"><i class="fa fa-check"></i><b>12.3.6</b> Simultaneous Estimation and Confidence Bands</a></li>
+<li class="chapter" data-level="11.3" data-path="analysis-of-variance-and-regression.html"><a href="analysis-of-variance-and-regression.html#simple-linear-regression"><i class="fa fa-check"></i><b>11.3</b> Simple Linear Regression</a>
+<ul>
+<li class="chapter" data-level="11.3.1" data-path="analysis-of-variance-and-regression.html"><a href="analysis-of-variance-and-regression.html#least-squares-a-mathematical-solution"><i class="fa fa-check"></i><b>11.3.1</b> Least Squares: A Mathematical Solution</a></li>
+<li class="chapter" data-level="11.3.2" data-path="analysis-of-variance-and-regression.html"><a href="analysis-of-variance-and-regression.html#best-linear-unbiased-estimators-a-statistical-solution"><i class="fa fa-check"></i><b>11.3.2</b> Best Linear Unbiased Estimators: A Statistical Solution</a></li>
+<li class="chapter" data-level="11.3.3" data-path="analysis-of-variance-and-regression.html"><a href="analysis-of-variance-and-regression.html#models-and-distribution-assumptions"><i class="fa fa-check"></i><b>11.3.3</b> Models and Distribution Assumptions</a></li>
+<li class="chapter" data-level="11.3.4" data-path="analysis-of-variance-and-regression.html"><a href="analysis-of-variance-and-regression.html#estimation-and-testing-with-normal-erros"><i class="fa fa-check"></i><b>11.3.4</b> Estimation and Testing with Normal Erros</a></li>
+<li class="chapter" data-level="11.3.5" data-path="analysis-of-variance-and-regression.html"><a href="analysis-of-variance-and-regression.html#estimation-and-prediction-at-a-specified-x-x0"><i class="fa fa-check"></i><b>11.3.5</b> Estimation and Prediction at a Specified x = x0</a></li>
+<li class="chapter" data-level="11.3.6" data-path="analysis-of-variance-and-regression.html"><a href="analysis-of-variance-and-regression.html#simultaneous-estimation-and-confidence-bands"><i class="fa fa-check"></i><b>11.3.6</b> Simultaneous Estimation and Confidence Bands</a></li>
 </ul></li>
-<li class="chapter" data-level="12.4" data-path="analysis-of-variance-and-regression.html"><a href="analysis-of-variance-and-regression.html#miscellanea-7"><i class="fa fa-check"></i><b>12.4</b> Miscellanea</a></li>
+<li class="chapter" data-level="11.4" data-path="analysis-of-variance-and-regression.html"><a href="analysis-of-variance-and-regression.html#miscellanea-7"><i class="fa fa-check"></i><b>11.4</b> Miscellanea</a></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="regression-models.html"><a href="regression-models.html"><i class="fa fa-check"></i><b>13</b> Regression Models</a><ul>
-<li class="chapter" data-level="13.1" data-path="regression-models.html"><a href="regression-models.html#introduction-6"><i class="fa fa-check"></i><b>13.1</b> Introduction</a></li>
-<li class="chapter" data-level="13.2" data-path="regression-models.html"><a href="regression-models.html#regression-with-errors-in-variables"><i class="fa fa-check"></i><b>13.2</b> Regression with Errors in Variables</a><ul>
-<li class="chapter" data-level="13.2.1" data-path="regression-models.html"><a href="regression-models.html#functional-and-structural-relationships"><i class="fa fa-check"></i><b>13.2.1</b> Functional and Structural Relationships</a></li>
-<li class="chapter" data-level="13.2.2" data-path="regression-models.html"><a href="regression-models.html#a-least-squares-solution"><i class="fa fa-check"></i><b>13.2.2</b> A Least Squares Solution</a></li>
-<li class="chapter" data-level="13.2.3" data-path="regression-models.html"><a href="regression-models.html#maximum-likelihood-estimation"><i class="fa fa-check"></i><b>13.2.3</b> Maximum Likelihood Estimation</a></li>
-<li class="chapter" data-level="13.2.4" data-path="regression-models.html"><a href="regression-models.html#confidence-sets"><i class="fa fa-check"></i><b>13.2.4</b> Confidence Sets</a></li>
+<li class="chapter" data-level="12" data-path="regression-models.html"><a href="regression-models.html"><i class="fa fa-check"></i><b>12</b> Regression Models</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="regression-models.html"><a href="regression-models.html#introduction-6"><i class="fa fa-check"></i><b>12.1</b> Introduction</a></li>
+<li class="chapter" data-level="12.2" data-path="regression-models.html"><a href="regression-models.html#regression-with-errors-in-variables"><i class="fa fa-check"></i><b>12.2</b> Regression with Errors in Variables</a>
+<ul>
+<li class="chapter" data-level="12.2.1" data-path="regression-models.html"><a href="regression-models.html#functional-and-structural-relationships"><i class="fa fa-check"></i><b>12.2.1</b> Functional and Structural Relationships</a></li>
+<li class="chapter" data-level="12.2.2" data-path="regression-models.html"><a href="regression-models.html#a-least-squares-solution"><i class="fa fa-check"></i><b>12.2.2</b> A Least Squares Solution</a></li>
+<li class="chapter" data-level="12.2.3" data-path="regression-models.html"><a href="regression-models.html#maximum-likelihood-estimation"><i class="fa fa-check"></i><b>12.2.3</b> Maximum Likelihood Estimation</a></li>
+<li class="chapter" data-level="12.2.4" data-path="regression-models.html"><a href="regression-models.html#confidence-sets"><i class="fa fa-check"></i><b>12.2.4</b> Confidence Sets</a></li>
 </ul></li>
-<li class="chapter" data-level="13.3" data-path="regression-models.html"><a href="regression-models.html#logistic-regression"><i class="fa fa-check"></i><b>13.3</b> Logistic Regression</a><ul>
-<li class="chapter" data-level="13.3.1" data-path="regression-models.html"><a href="regression-models.html#the-model"><i class="fa fa-check"></i><b>13.3.1</b> The Model</a></li>
-<li class="chapter" data-level="13.3.2" data-path="regression-models.html"><a href="regression-models.html#estimation"><i class="fa fa-check"></i><b>13.3.2</b> Estimation</a></li>
+<li class="chapter" data-level="12.3" data-path="regression-models.html"><a href="regression-models.html#logistic-regression"><i class="fa fa-check"></i><b>12.3</b> Logistic Regression</a>
+<ul>
+<li class="chapter" data-level="12.3.1" data-path="regression-models.html"><a href="regression-models.html#the-model"><i class="fa fa-check"></i><b>12.3.1</b> The Model</a></li>
+<li class="chapter" data-level="12.3.2" data-path="regression-models.html"><a href="regression-models.html#estimation"><i class="fa fa-check"></i><b>12.3.2</b> Estimation</a></li>
 </ul></li>
-<li class="chapter" data-level="13.4" data-path="regression-models.html"><a href="regression-models.html#robust-regression"><i class="fa fa-check"></i><b>13.4</b> Robust Regression</a></li>
-<li class="chapter" data-level="13.5" data-path="regression-models.html"><a href="regression-models.html#miscellanea-8"><i class="fa fa-check"></i><b>13.5</b> Miscellanea</a></li>
+<li class="chapter" data-level="12.4" data-path="regression-models.html"><a href="regression-models.html#robust-regression"><i class="fa fa-check"></i><b>12.4</b> Robust Regression</a></li>
+<li class="chapter" data-level="12.5" data-path="regression-models.html"><a href="regression-models.html#miscellanea-8"><i class="fa fa-check"></i><b>12.5</b> Miscellanea</a></li>
 </ul></li>
 <li class="divider"></li>
 Published with <a href="https://github.com/rstudio/bookdown" target="blank">bookdown</a> by <a href="http://zjuwhw.github.io/" target="blank">zjuwhw</a>
@@ -270,40 +310,40 @@ Published with <a href="https://github.com/rstudio/bookdown" target="blank">book
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="principles-of-data-reduction" class="section level1">
-<h1><span class="header-section-number">7</span> Principles of Data Reduction</h1>
-<div id="introduction-1" class="section level2">
-<h2><span class="header-section-number">7.1</span> Introduction</h2>
+<div id="principles-of-data-reduction" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">6</span> Principles of Data Reduction<a href="principles-of-data-reduction.html#principles-of-data-reduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="introduction-1" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Introduction<a href="principles-of-data-reduction.html#introduction-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 </div>
-<div id="the-sufficiency-principle" class="section level2">
-<h2><span class="header-section-number">7.2</span> The Sufficiency Principle</h2>
-<div id="sufficient-statistics" class="section level3">
-<h3><span class="header-section-number">7.2.1</span> Sufficient Statistics</h3>
+<div id="the-sufficiency-principle" class="section level2 hasAnchor" number="6.2">
+<h2><span class="header-section-number">6.2</span> The Sufficiency Principle<a href="principles-of-data-reduction.html#the-sufficiency-principle" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="sufficient-statistics" class="section level3 hasAnchor" number="6.2.1">
+<h3><span class="header-section-number">6.2.1</span> Sufficient Statistics<a href="principles-of-data-reduction.html#sufficient-statistics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 </div>
-<div id="minimal-sufficient-statistics" class="section level3">
-<h3><span class="header-section-number">7.2.2</span> Minimal Sufficient Statistics</h3>
+<div id="minimal-sufficient-statistics" class="section level3 hasAnchor" number="6.2.2">
+<h3><span class="header-section-number">6.2.2</span> Minimal Sufficient Statistics<a href="principles-of-data-reduction.html#minimal-sufficient-statistics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 </div>
-<div id="ancillary-statistics" class="section level3">
-<h3><span class="header-section-number">7.2.3</span> Ancillary Statistics</h3>
+<div id="ancillary-statistics" class="section level3 hasAnchor" number="6.2.3">
+<h3><span class="header-section-number">6.2.3</span> Ancillary Statistics<a href="principles-of-data-reduction.html#ancillary-statistics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 </div>
-<div id="sufficient-ancillary-and-complete-statistics" class="section level3">
-<h3><span class="header-section-number">7.2.4</span> Sufficient, Ancillary, and Complete Statistics</h3>
-</div>
-</div>
-<div id="the-likelihood-principle" class="section level2">
-<h2><span class="header-section-number">7.3</span> The Likelihood Principle</h2>
-<div id="the-likelihood-function" class="section level3">
-<h3><span class="header-section-number">7.3.1</span> The Likelihood Function</h3>
-</div>
-<div id="the-formal-likelihood-principe" class="section level3">
-<h3><span class="header-section-number">7.3.2</span> The Formal Likelihood Principe</h3>
+<div id="sufficient-ancillary-and-complete-statistics" class="section level3 hasAnchor" number="6.2.4">
+<h3><span class="header-section-number">6.2.4</span> Sufficient, Ancillary, and Complete Statistics<a href="principles-of-data-reduction.html#sufficient-ancillary-and-complete-statistics" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 </div>
 </div>
-<div id="the-equivariance-principle" class="section level2">
-<h2><span class="header-section-number">7.4</span> The Equivariance Principle</h2>
+<div id="the-likelihood-principle" class="section level2 hasAnchor" number="6.3">
+<h2><span class="header-section-number">6.3</span> The Likelihood Principle<a href="principles-of-data-reduction.html#the-likelihood-principle" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="the-likelihood-function" class="section level3 hasAnchor" number="6.3.1">
+<h3><span class="header-section-number">6.3.1</span> The Likelihood Function<a href="principles-of-data-reduction.html#the-likelihood-function" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 </div>
-<div id="miscelllanea" class="section level2">
-<h2><span class="header-section-number">7.5</span> Miscelllanea</h2>
+<div id="the-formal-likelihood-principe" class="section level3 hasAnchor" number="6.3.2">
+<h3><span class="header-section-number">6.3.2</span> The Formal Likelihood Principe<a href="principles-of-data-reduction.html#the-formal-likelihood-principe" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+</div>
+<div id="the-equivariance-principle" class="section level2 hasAnchor" number="6.4">
+<h2><span class="header-section-number">6.4</span> The Equivariance Principle<a href="principles-of-data-reduction.html#the-equivariance-principle" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+</div>
+<div id="miscelllanea" class="section level2 hasAnchor" number="6.5">
+<h2><span class="header-section-number">6.5</span> Miscelllanea<a href="principles-of-data-reduction.html#miscelllanea" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 
 </div>
 </div>
@@ -317,12 +357,13 @@ Published with <a href="https://github.com/rstudio/bookdown" target="blank">book
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
 <script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
@@ -330,11 +371,12 @@ gitbook.start({
 "github": false,
 "facebook": true,
 "twitter": true,
-"google": false,
+"linkedin": false,
 "weibo": false,
-"instapper": false,
+"instapaper": false,
 "vk": false,
-"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
 },
 "fontsettings": {
 "theme": "white",
@@ -345,7 +387,19 @@ gitbook.start({
 "link": null,
 "text": null
 },
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
 "download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "none"
 }
@@ -358,9 +412,12 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:" && /^https?:/.test(script.src))
-      script.src  = script.src.replace(/^https?:/, '');
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
 </script>
